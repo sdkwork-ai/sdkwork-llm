@@ -1692,6 +1692,7 @@ name = "sdkwork-api-llm-assembly"
 version = "0.1.0"
 dependencies = [
  "axum",
+ "sdkwork-database-sqlx",
  "sdkwork-intelligence-llm-repository-sqlx",
  "sdkwork-intelligence-llm-service",
  "sdkwork-routes-llm-app-api",
@@ -1699,6 +1700,7 @@ dependencies = [
  "sdkwork-routes-llm-open-api",
  "sdkwork-web-bootstrap",
  "sdkwork-web-core",
+ "serde_json",
  "tokio",
 ]
 
