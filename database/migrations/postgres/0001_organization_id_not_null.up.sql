@@ -18,6 +18,7 @@
 
 BEGIN;
 
+ALTER TABLE llm_space ADD COLUMN IF NOT EXISTS organization_id BIGINT NOT NULL DEFAULT 0;
 UPDATE llm_space SET organization_id = 0 WHERE organization_id IS NULL;
 ALTER TABLE llm_space ALTER COLUMN organization_id SET DEFAULT 0;
 ALTER TABLE llm_space ALTER COLUMN organization_id SET NOT NULL;
