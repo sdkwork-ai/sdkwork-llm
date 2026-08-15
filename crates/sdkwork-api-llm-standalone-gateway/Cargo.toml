@@ -8,7 +8,7 @@ name = "sdkwork-api-llm-standalone-gateway"
 path = "src/main.rs"
 
 [dependencies]
-sdkwork_api_llm_assembly = { package = "sdkwork-api-llm-assembly", path = "../sdkwork-api-llm-assembly" }
+sdkwork_api_llm_assembly.workspace = true
 axum.workspace = true
 tokio.workspace = true
 tracing.workspace = true
