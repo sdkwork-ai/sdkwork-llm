@@ -8,6 +8,7 @@ const DEV_API_KEY: &str = "api_key_id=dev-key;tenant_id=100_001;user_id=1;app_id
 #[tokio::test]
 async fn api_server_bootstrap_auth_and_healthz_contracts() {
     let _guard = env_test_lock();
+    std::env::set_var("SDKWORK_ENVIRONMENT", "development");
     std::env::set_var("SDKWORK_LLM_ENVIRONMENT", "development");
     std::env::set_var("SDKWORK_LLM_DEV_AUTH_BYPASS", "true");
     std::env::set_var("SDKWORK_DATABASE_URL", "sqlite::memory:");
@@ -27,8 +28,9 @@ async fn api_server_bootstrap_auth_and_healthz_contracts() {
         .unwrap();
     assert_eq!(healthz.status(), StatusCode::OK);
 
-    std::env::set_var("SDKWORK_LLM_ENVIRONMENT", "production");
-    std::env::set_var("SDKWORK_LLM_CONFIG_PROFILE", "production");
+    std::env::set_var("SDKWORK_ENVIRONMENT", "test");
+    std::env::set_var("SDKWORK_LLM_ENVIRONMENT", "test");
+    std::env::set_var("SDKWORK_LLM_CONFIG_PROFILE", "test");
     std::env::remove_var("SDKWORK_LLM_DEV_AUTH_BYPASS");
     std::env::set_var("SDKWORK_DATABASE_URL", "sqlite::memory:");
 

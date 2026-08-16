@@ -13,7 +13,7 @@ sdkwork-database-config.workspace = true
 sdkwork-database-repository.workspace = true
 sdkwork-database-sqlx = { workspace = true, features = ["postgres"] }
 sdkwork-llm-database-host.workspace = true
-sdkwork-llm-plugin-native-sql.workspace = true
+sdkwork-llm-plugin-native-sql = { workspace = true, features = ["client-local-sqlite"] }
 sdkwork-utils-rust.workspace = true
 
 [dev-dependencies]

@@ -38,6 +38,13 @@
   ],
   "contracts": {
     "publicExports": [],
+    "requiredPorts": [
+      {
+        "name": "applicationApiAssembly",
+        "export": "sdkwork_api_llm_assembly::assemble_api_router_runtime",
+        "provider": "sdkwork-api-llm-assembly"
+      }
+    ],
     "runtimeEntrypoints": [
       "sdkwork-api-llm-standalone-gateway"
     ],
