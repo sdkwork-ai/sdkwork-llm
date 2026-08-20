@@ -2,7 +2,7 @@ import type { LlmRetrievalResult } from './llm-retrieval-result';
 
 export interface RetrievalsRetrieveResponse {
   code: 0;
-  data: unknown & Record<string, unknown>;
+  data: unknown & { item: LlmRetrievalResult; };
   /** Server-owned request correlation id. */
   traceId: string;
 }

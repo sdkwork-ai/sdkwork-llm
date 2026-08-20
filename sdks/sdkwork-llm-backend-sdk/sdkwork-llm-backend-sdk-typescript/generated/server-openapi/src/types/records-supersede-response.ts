@@ -1,8 +1,8 @@
 import type { LlmRecord } from './llm-record';
 
-export interface RecordsSupersedeResponse201 {
+export interface RecordsSupersedeResponse {
   code: 0;
-  data: unknown & Record<string, unknown>;
+  data: unknown & { item: LlmRecord; };
   /** Server-owned request correlation id. */
   traceId: string;
 }

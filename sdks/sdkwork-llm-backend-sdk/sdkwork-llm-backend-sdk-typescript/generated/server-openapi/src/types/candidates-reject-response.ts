@@ -1,8 +1,8 @@
 import type { LlmCandidate } from './llm-candidate';
 
-export interface CandidatesApproveResponse201 {
+export interface CandidatesRejectResponse {
   code: 0;
-  data: unknown & Record<string, unknown>;
+  data: unknown & { item: LlmCandidate; };
   /** Server-owned request correlation id. */
   traceId: string;
 }

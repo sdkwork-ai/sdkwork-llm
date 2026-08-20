@@ -12,7 +12,7 @@
   "generatedFiles": [
     {
       "path": "bin/publish-core.mjs",
-      "sha256": "98ad0918a78bfbe22bf8f12fec709b0bed545b9e01edd40f5e4abf31a23378a5"
+      "sha256": "a47e95119bf3eafcbcb2102f7024c147f967924e4e3f343d1a29effb4b6765df"
     },
     {
       "path": "bin/publish.ps1",
@@ -40,11 +40,11 @@
     },
     {
       "path": "package.json",
-      "sha256": "27c0cdc468f7f1d2c3d2a25c9ec5d119ac8c76683e7dd475c0dc7cf72a60d4eb"
+      "sha256": "cbd10cf2f66c6ca1da3128051105819dbfb5955cd801c76567e7e285fc6c4523"
     },
     {
       "path": "README.md",
-      "sha256": "55029cdb0f0c6203a3a7f8fa066f34385c416c6a518dbce1c344812a2926af3c"
+      "sha256": "a340d6302047611df4e48c80d1af3ffdeb6689d82bf2d4bd216018cdf4e9198d"
     },
     {
       "path": "sdkwork-sdk.json",
@@ -52,7 +52,7 @@
     },
     {
       "path": "src/api/base.ts",
-      "sha256": "02ad25e6bf331ff241ba387c2947ddf1900dd849038e08c2757416a3aa788a04"
+      "sha256": "94d136c54a008dfe7602e373a0b2c79176bbf2fc6e7c899fc23b1f12f750380f"
     },
     {
       "path": "src/api/index.ts",
@@ -60,7 +60,7 @@
     },
     {
       "path": "src/api/llm.ts",
-      "sha256": "261ce246361bb0b2f727d25be9b55da072ad64ace9ecf3496ee29ebc2707cfd8"
+      "sha256": "977bd925cbd6e860e2a37fb8a727629f71588b478e9e0daad73d8b76c6ad400a"
     },
     {
       "path": "src/api/paths.ts",
@@ -72,7 +72,7 @@
     },
     {
       "path": "src/http/client.ts",
-      "sha256": "8ae2b11449c875fba293e3e5a93c18c788cbbd92e402c1f64cd788b38a3f793c"
+      "sha256": "b8676ea00512ec8e38fe35ea5df9c3783cd7232d0b207ad75e7c12872702e14f"
     },
     {
       "path": "src/http/index.ts",
@@ -88,15 +88,15 @@
     },
     {
       "path": "src/types/candidates-list-response.ts",
-      "sha256": "8b28528892dc924ca5acaabc9de08199c6a4d35c1502339019d628b2717ed522"
+      "sha256": "c2bb41d0a9e6b66d94f57f7af4dba7a78da31175dca826dde078c13a1f1b150e"
     },
     {
       "path": "src/types/candidates-retrieve-response.ts",
-      "sha256": "aafe389d0d0d96e8665f6a74e57fa4c06f5b21db59b761823b51a8464eafa460"
+      "sha256": "f9dc8fbec53c4cf84216b562cb4f8c9a09077c745a4225fad94b6381cf3dea06"
     },
     {
       "path": "src/types/capabilities-retrieve-response.ts",
-      "sha256": "f512f14556343cd6f2800b9d7de8253a99574f1058581cb23e8cb8b8c2d074b5"
+      "sha256": "22bb479354a7d5e3cc9948b43f33a70d5013096c7398e166d69c055a800ad2ae"
     },
     {
       "path": "src/types/common.ts",
@@ -104,31 +104,31 @@
     },
     {
       "path": "src/types/context-packs-create-response201.ts",
-      "sha256": "2ee6211643eb959afe8b21e1602f5776b8eaac31625980b4bb0c4ac9537d2eae"
+      "sha256": "a3524155f1e276d980781e57a78336a30e4af31d47294c6fd96a45c7e57ee974"
     },
     {
       "path": "src/types/context-packs-retrieve-response.ts",
-      "sha256": "276a8017548079bd658a09c95cf8c1445122338ea937cbbdb749bdebd95a18ae"
+      "sha256": "116ee4dfd8c40fb615d442886c8faa210a92bd48f7bda1e3b48b8060b039a80b"
     },
     {
       "path": "src/types/events-create-response201.ts",
-      "sha256": "14d384a25be3051fd413a98f5a6b6213744717064dd2f4fa181b0d1cd880f4ef"
+      "sha256": "736db7e5160ba1121e8d0a4b96b3c6e11c1fdf9137b136302f6132d20d8c4586"
     },
     {
       "path": "src/types/events-retrieve-response.ts",
-      "sha256": "7644191ab51d020c90e8b3942b4809661ce690d340ea79bbe3f476629eb17a07"
+      "sha256": "544936598f2872dfd9f33ed98f3940e0d4e17013f47d7870c28141369036a74b"
     },
     {
       "path": "src/types/extractions-create-response201.ts",
-      "sha256": "06547559104d3462d93ebb17f254c8d6cd5685fbca9c07b31372e9e7d01d8b71"
+      "sha256": "dd352baf0599cc48092dd7adb2edd969d1a1178abf9c459d42ada637dc3ee918"
     },
     {
       "path": "src/types/feedback-create-response201.ts",
-      "sha256": "35a6675ad3d225fc9099b1b17624b0dc94ad7e3e7b25a4b45deafd273f19a99a"
+      "sha256": "03c7d2296b13560248f7c6579ad26f7a130acd31e85cb329538b609287ac4492"
     },
     {
       "path": "src/types/field-error.ts",
-      "sha256": "df70e331e6bff0817bc35428286fa8de5d7274ab83a6c60d7184759bf680a088"
+      "sha256": "7688827a804d5c888fdf626b89e3356832f858e24f0657069b6b842a31ae6907"
     },
     {
       "path": "src/types/index.ts",
@@ -364,7 +364,7 @@
     },
     {
       "path": "src/types/problem-detail.ts",
-      "sha256": "deca621176487754cbfa2012aa3eab046131ced5829ddf7cff64de692f8bcb0e"
+      "sha256": "c41fdf6433e1167d2fb1f3ac38fd13eb77178f4c0633c9e27824f1e1687ee4f6"
     },
     {
       "path": "src/types/problem-details.ts",
@@ -372,31 +372,31 @@
     },
     {
       "path": "src/types/provider-health-retrieve-response.ts",
-      "sha256": "1b6c347d8684c8067f3d23a2c316c10eef0a18d7c067c0dac23911e1fd2ef419"
+      "sha256": "18f45c3c1a99edc7ea1119764a285a7089e944111f2a51d263884d03dd72c5db"
     },
     {
       "path": "src/types/records-create-response201.ts",
-      "sha256": "1eb80299360ce94321d89baaccd220764d63ccf4cdf50a73605a9aec7ae362f5"
+      "sha256": "9f5ae5f26e99c5299240c8ba79c37a8df58072a4c1ac77021b74d7885fe1ea21"
     },
     {
       "path": "src/types/records-list-response.ts",
-      "sha256": "c1563f2cf051d3db9e53fe5ccbf5968689bfa9e81283268f506d53939bf5be9a"
+      "sha256": "11ecd271b5044e9fa1839fb13c59275d18c76465556188e6fe7d151fd5accadc"
     },
     {
       "path": "src/types/records-retrieve-response.ts",
-      "sha256": "750216ba08dbed1b34b2f85bd1667f39bb8abfb27c42920495c1c99738128e03"
+      "sha256": "f9a2bb5a6783cbd9d805887440ccf121a086c2ccfdb9041988c4072852a703f3"
     },
     {
       "path": "src/types/records-update-response.ts",
-      "sha256": "dc89f190b87d1be1251d088a69fc999c5628c6b6eb485bef9451d8ead78c5e75"
+      "sha256": "89052ed5364f9198efa941d8d7b33ce38a8fad5f592ec260425dcb1c709ee523"
     },
     {
       "path": "src/types/retrievals-create-response201.ts",
-      "sha256": "b5f9b95ed6cc06434a3d5dbc8cf5821391673cd12b5a5039973585e60be93a75"
+      "sha256": "3c21b23cd392f9587373d5539853989ede63dc40d87729c1504b206a9bb97bd1"
     },
     {
       "path": "src/types/retrievals-retrieve-response.ts",
-      "sha256": "5a387eb8389c71352c2dcabcd0147412dc9471811eea1b7fd2d5aa98831f06f7"
+      "sha256": "2ffe30d5e85822896b299573e38e1463ded1a1f56ccb61fcf91ed4db8bf027bc"
     },
     {
       "path": "src/types/sdk-work-api-response.ts",

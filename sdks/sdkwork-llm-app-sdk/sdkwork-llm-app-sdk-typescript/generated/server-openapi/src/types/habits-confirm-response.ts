@@ -1,8 +1,8 @@
 import type { LlmHabit } from './llm-habit';
 
-export interface HabitsRejectResponse201 {
+export interface HabitsConfirmResponse {
   code: 0;
-  data: unknown & Record<string, unknown>;
+  data: unknown & { item: LlmHabit; };
   /** Server-owned request correlation id. */
   traceId: string;
 }

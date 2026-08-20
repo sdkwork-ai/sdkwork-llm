@@ -1,5 +1,5 @@
 import { appApiPath } from './paths';
-import type { HttpClient } from '../http/client';
+import type { ApiRequestOptions, HttpClient } from '../http/client';
 
 import type { LlmCandidate, LlmContextPack, LlmContextPackRequest, LlmEvent, LlmEventRequest, LlmExportJob, LlmExportRequest, LlmExtractionRequest, LlmFeedback, LlmFeedbackRequest, LlmForgetJob, LlmForgetRequest, LlmHabit, LlmHabitRequest, LlmLearningJob, LlmLearningSettings, LlmLearningSettingsRequest, LlmRecord, LlmRecordRequest, LlmRecordSource, LlmRetrievalRequest, LlmRetrievalResult, LlmReviewRequest, LlmSpace, LlmSpaceRequest, PageInfo } from '../types';
 
@@ -12,12 +12,12 @@ export class LlmLearningSettingsApi {
   }
 
 
-async retrieve(): Promise<LlmLearningSettings> {
-    return this.client.get<LlmLearningSettings>(appApiPath(`/llm/learning_settings`));
+async retrieve(requestOptions?: ApiRequestOptions): Promise<LlmLearningSettings> {
+    return this.client.request<LlmLearningSettings>(appApiPath(`/llm/learning_settings`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'item' });
   }
 
-async update(body: LlmLearningSettingsRequest): Promise<LlmLearningSettings> {
-    return this.client.patch<LlmLearningSettings>(appApiPath(`/llm/learning_settings`), body, undefined, undefined, 'application/json');
+async update(body: LlmLearningSettingsRequest, requestOptions?: ApiRequestOptions): Promise<LlmLearningSettings> {
+    return this.client.request<LlmLearningSettings>(appApiPath(`/llm/learning_settings`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'PATCH' as any, body, contentType: 'application/json', sdkworkUnwrapKind: 'item' });
   }
 }
 
@@ -33,18 +33,18 @@ export class LlmExportJobsApi {
   }
 
 
-async create(body: LlmExportRequest, params?: LlmExportJobsCreateParams): Promise<LlmExportJob> {
+async create(body: LlmExportRequest, params?: LlmExportJobsCreateParams, requestOptions?: ApiRequestOptions): Promise<LlmExportJob> {
     const requestHeaders = buildRequestHeaders(
       {
         'Idempotency-Key': { value: params?.idempotencyKey, style: 'simple', explode: false },
       },
       {}
     );
-    return this.client.post<LlmExportJob>(appApiPath(`/llm/export_jobs`), body, undefined, requestHeaders, 'application/json');
+    return this.client.request<LlmExportJob>(appApiPath(`/llm/export_jobs`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'POST' as any, body, contentType: 'application/json', ...(requestHeaders !== undefined ? { headers: requestHeaders } : {}), sdkworkUnwrapKind: 'item' });
   }
 
-async retrieve(exportJobId: string): Promise<LlmExportJob> {
-    return this.client.get<LlmExportJob>(appApiPath(`/llm/export_jobs/${serializePathParameter(exportJobId, { name: 'exportJobId', style: 'simple', explode: false })}`));
+async retrieve(exportJobId: string, requestOptions?: ApiRequestOptions): Promise<LlmExportJob> {
+    return this.client.request<LlmExportJob>(appApiPath(`/llm/export_jobs/${serializePathParameter(exportJobId, { name: 'exportJobId', style: 'simple', explode: false })}`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'item' });
   }
 }
 
@@ -60,14 +60,14 @@ export class LlmFeedbackApi {
   }
 
 
-async create(body: LlmFeedbackRequest, params?: LlmFeedbackCreateParams): Promise<LlmFeedback> {
+async create(body: LlmFeedbackRequest, params?: LlmFeedbackCreateParams, requestOptions?: ApiRequestOptions): Promise<LlmFeedback> {
     const requestHeaders = buildRequestHeaders(
       {
         'Idempotency-Key': { value: params?.idempotencyKey, style: 'simple', explode: false },
       },
       {}
     );
-    return this.client.post<LlmFeedback>(appApiPath(`/llm/feedback`), body, undefined, requestHeaders, 'application/json');
+    return this.client.request<LlmFeedback>(appApiPath(`/llm/feedback`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'POST' as any, body, contentType: 'application/json', ...(requestHeaders !== undefined ? { headers: requestHeaders } : {}), sdkworkUnwrapKind: 'item' });
   }
 }
 
@@ -83,18 +83,18 @@ export class LlmContextPacksApi {
   }
 
 
-async create(body: LlmContextPackRequest, params?: LlmContextPacksCreateParams): Promise<LlmContextPack> {
+async create(body: LlmContextPackRequest, params?: LlmContextPacksCreateParams, requestOptions?: ApiRequestOptions): Promise<LlmContextPack> {
     const requestHeaders = buildRequestHeaders(
       {
         'Idempotency-Key': { value: params?.idempotencyKey, style: 'simple', explode: false },
       },
       {}
     );
-    return this.client.post<LlmContextPack>(appApiPath(`/llm/context_packs`), body, undefined, requestHeaders, 'application/json');
+    return this.client.request<LlmContextPack>(appApiPath(`/llm/context_packs`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'POST' as any, body, contentType: 'application/json', ...(requestHeaders !== undefined ? { headers: requestHeaders } : {}), sdkworkUnwrapKind: 'item' });
   }
 
-async retrieve(contextPackId: string): Promise<LlmContextPack> {
-    return this.client.get<LlmContextPack>(appApiPath(`/llm/context_packs/${serializePathParameter(contextPackId, { name: 'contextPackId', style: 'simple', explode: false })}`));
+async retrieve(contextPackId: string, requestOptions?: ApiRequestOptions): Promise<LlmContextPack> {
+    return this.client.request<LlmContextPack>(appApiPath(`/llm/context_packs/${serializePathParameter(contextPackId, { name: 'contextPackId', style: 'simple', explode: false })}`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'item' });
   }
 }
 
@@ -110,18 +110,18 @@ export class LlmRetrievalsApi {
   }
 
 
-async create(body: LlmRetrievalRequest, params?: LlmRetrievalsCreateParams): Promise<LlmRetrievalResult> {
+async create(body: LlmRetrievalRequest, params?: LlmRetrievalsCreateParams, requestOptions?: ApiRequestOptions): Promise<LlmRetrievalResult> {
     const requestHeaders = buildRequestHeaders(
       {
         'Idempotency-Key': { value: params?.idempotencyKey, style: 'simple', explode: false },
       },
       {}
     );
-    return this.client.post<LlmRetrievalResult>(appApiPath(`/llm/retrievals`), body, undefined, requestHeaders, 'application/json');
+    return this.client.request<LlmRetrievalResult>(appApiPath(`/llm/retrievals`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'POST' as any, body, contentType: 'application/json', ...(requestHeaders !== undefined ? { headers: requestHeaders } : {}), sdkworkUnwrapKind: 'item' });
   }
 
-async retrieve(retrievalId: string): Promise<LlmRetrievalResult> {
-    return this.client.get<LlmRetrievalResult>(appApiPath(`/llm/retrievals/${serializePathParameter(retrievalId, { name: 'retrievalId', style: 'simple', explode: false })}`));
+async retrieve(retrievalId: string, requestOptions?: ApiRequestOptions): Promise<LlmRetrievalResult> {
+    return this.client.request<LlmRetrievalResult>(appApiPath(`/llm/retrievals/${serializePathParameter(retrievalId, { name: 'retrievalId', style: 'simple', explode: false })}`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'item' });
   }
 }
 
@@ -148,42 +148,42 @@ export class LlmHabitsApi {
   }
 
 
-async list(params?: LlmHabitsListParams): Promise<Record<string, unknown>> {
+async list(params?: LlmHabitsListParams, requestOptions?: ApiRequestOptions): Promise<{ items: LlmHabit[]; pageInfo: PageInfo; }> {
     const query = buildQueryString([
       { name: 'q', value: params?.q, style: 'form', explode: true, allowReserved: false },
       { name: 'cursor', value: params?.cursor, style: 'form', explode: true, allowReserved: false },
       { name: 'page_size', value: params?.pageSize, style: 'form', explode: true, allowReserved: false },
       { name: 'stage', value: params?.stage, style: 'form', explode: true, allowReserved: false },
     ]);
-    return this.client.get<Record<string, unknown>>(appendQueryString(appApiPath(`/llm/habits`), query));
+    return this.client.request<{ items: LlmHabit[]; pageInfo: PageInfo; }>(appendQueryString(appApiPath(`/llm/habits`), query), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'page' });
   }
 
-async retrieve(habitId: string): Promise<LlmHabit> {
-    return this.client.get<LlmHabit>(appApiPath(`/llm/habits/${serializePathParameter(habitId, { name: 'habitId', style: 'simple', explode: false })}`));
+async retrieve(habitId: string, requestOptions?: ApiRequestOptions): Promise<LlmHabit> {
+    return this.client.request<LlmHabit>(appApiPath(`/llm/habits/${serializePathParameter(habitId, { name: 'habitId', style: 'simple', explode: false })}`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'item' });
   }
 
-async update(habitId: string, body: LlmHabitRequest): Promise<LlmHabit> {
-    return this.client.patch<LlmHabit>(appApiPath(`/llm/habits/${serializePathParameter(habitId, { name: 'habitId', style: 'simple', explode: false })}`), body, undefined, undefined, 'application/json');
+async update(habitId: string, body: LlmHabitRequest, requestOptions?: ApiRequestOptions): Promise<LlmHabit> {
+    return this.client.request<LlmHabit>(appApiPath(`/llm/habits/${serializePathParameter(habitId, { name: 'habitId', style: 'simple', explode: false })}`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'PATCH' as any, body, contentType: 'application/json', sdkworkUnwrapKind: 'item' });
   }
 
-async confirm(habitId: string, body: LlmReviewRequest, params?: LlmHabitsConfirmParams): Promise<LlmHabit> {
+async confirm(habitId: string, body: LlmReviewRequest, params?: LlmHabitsConfirmParams, requestOptions?: ApiRequestOptions): Promise<LlmHabit> {
     const requestHeaders = buildRequestHeaders(
       {
         'Idempotency-Key': { value: params?.idempotencyKey, style: 'simple', explode: false },
       },
       {}
     );
-    return this.client.post<LlmHabit>(appApiPath(`/llm/habits/${serializePathParameter(habitId, { name: 'habitId', style: 'simple', explode: false })}/confirm`), body, undefined, requestHeaders, 'application/json');
+    return this.client.request<LlmHabit>(appApiPath(`/llm/habits/${serializePathParameter(habitId, { name: 'habitId', style: 'simple', explode: false })}/confirm`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'POST' as any, body, contentType: 'application/json', ...(requestHeaders !== undefined ? { headers: requestHeaders } : {}), sdkworkUnwrapKind: 'item' });
   }
 
-async reject(habitId: string, body: LlmReviewRequest, params?: LlmHabitsRejectParams): Promise<LlmHabit> {
+async reject(habitId: string, body: LlmReviewRequest, params?: LlmHabitsRejectParams, requestOptions?: ApiRequestOptions): Promise<LlmHabit> {
     const requestHeaders = buildRequestHeaders(
       {
         'Idempotency-Key': { value: params?.idempotencyKey, style: 'simple', explode: false },
       },
       {}
     );
-    return this.client.post<LlmHabit>(appApiPath(`/llm/habits/${serializePathParameter(habitId, { name: 'habitId', style: 'simple', explode: false })}/reject`), body, undefined, requestHeaders, 'application/json');
+    return this.client.request<LlmHabit>(appApiPath(`/llm/habits/${serializePathParameter(habitId, { name: 'habitId', style: 'simple', explode: false })}/reject`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'POST' as any, body, contentType: 'application/json', ...(requestHeaders !== undefined ? { headers: requestHeaders } : {}), sdkworkUnwrapKind: 'item' });
   }
 }
 
@@ -210,38 +210,38 @@ export class LlmCandidatesApi {
   }
 
 
-async list(params?: LlmCandidatesListParams): Promise<Record<string, unknown>> {
+async list(params?: LlmCandidatesListParams, requestOptions?: ApiRequestOptions): Promise<{ items: LlmCandidate[]; pageInfo: PageInfo; }> {
     const query = buildQueryString([
       { name: 'q', value: params?.q, style: 'form', explode: true, allowReserved: false },
       { name: 'cursor', value: params?.cursor, style: 'form', explode: true, allowReserved: false },
       { name: 'page_size', value: params?.pageSize, style: 'form', explode: true, allowReserved: false },
       { name: 'decision_state', value: params?.decisionState, style: 'form', explode: true, allowReserved: false },
     ]);
-    return this.client.get<Record<string, unknown>>(appendQueryString(appApiPath(`/llm/candidates`), query));
+    return this.client.request<{ items: LlmCandidate[]; pageInfo: PageInfo; }>(appendQueryString(appApiPath(`/llm/candidates`), query), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'page' });
   }
 
-async retrieve(candidateId: string): Promise<LlmCandidate> {
-    return this.client.get<LlmCandidate>(appApiPath(`/llm/candidates/${serializePathParameter(candidateId, { name: 'candidateId', style: 'simple', explode: false })}`));
+async retrieve(candidateId: string, requestOptions?: ApiRequestOptions): Promise<LlmCandidate> {
+    return this.client.request<LlmCandidate>(appApiPath(`/llm/candidates/${serializePathParameter(candidateId, { name: 'candidateId', style: 'simple', explode: false })}`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'item' });
   }
 
-async approve(candidateId: string, body: LlmReviewRequest, params?: LlmCandidatesApproveParams): Promise<LlmCandidate> {
+async approve(candidateId: string, body: LlmReviewRequest, params?: LlmCandidatesApproveParams, requestOptions?: ApiRequestOptions): Promise<LlmCandidate> {
     const requestHeaders = buildRequestHeaders(
       {
         'Idempotency-Key': { value: params?.idempotencyKey, style: 'simple', explode: false },
       },
       {}
     );
-    return this.client.post<LlmCandidate>(appApiPath(`/llm/candidates/${serializePathParameter(candidateId, { name: 'candidateId', style: 'simple', explode: false })}/approve`), body, undefined, requestHeaders, 'application/json');
+    return this.client.request<LlmCandidate>(appApiPath(`/llm/candidates/${serializePathParameter(candidateId, { name: 'candidateId', style: 'simple', explode: false })}/approve`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'POST' as any, body, contentType: 'application/json', ...(requestHeaders !== undefined ? { headers: requestHeaders } : {}), sdkworkUnwrapKind: 'item' });
   }
 
-async reject(candidateId: string, body: LlmReviewRequest, params?: LlmCandidatesRejectParams): Promise<LlmCandidate> {
+async reject(candidateId: string, body: LlmReviewRequest, params?: LlmCandidatesRejectParams, requestOptions?: ApiRequestOptions): Promise<LlmCandidate> {
     const requestHeaders = buildRequestHeaders(
       {
         'Idempotency-Key': { value: params?.idempotencyKey, style: 'simple', explode: false },
       },
       {}
     );
-    return this.client.post<LlmCandidate>(appApiPath(`/llm/candidates/${serializePathParameter(candidateId, { name: 'candidateId', style: 'simple', explode: false })}/reject`), body, undefined, requestHeaders, 'application/json');
+    return this.client.request<LlmCandidate>(appApiPath(`/llm/candidates/${serializePathParameter(candidateId, { name: 'candidateId', style: 'simple', explode: false })}/reject`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'POST' as any, body, contentType: 'application/json', ...(requestHeaders !== undefined ? { headers: requestHeaders } : {}), sdkworkUnwrapKind: 'item' });
   }
 }
 
@@ -257,14 +257,14 @@ export class LlmExtractionsApi {
   }
 
 
-async create(body: LlmExtractionRequest, params?: LlmExtractionsCreateParams): Promise<LlmLearningJob> {
+async create(body: LlmExtractionRequest, params?: LlmExtractionsCreateParams, requestOptions?: ApiRequestOptions): Promise<LlmLearningJob> {
     const requestHeaders = buildRequestHeaders(
       {
         'Idempotency-Key': { value: params?.idempotencyKey, style: 'simple', explode: false },
       },
       {}
     );
-    return this.client.post<LlmLearningJob>(appApiPath(`/llm/extractions`), body, undefined, requestHeaders, 'application/json');
+    return this.client.request<LlmLearningJob>(appApiPath(`/llm/extractions`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'POST' as any, body, contentType: 'application/json', ...(requestHeaders !== undefined ? { headers: requestHeaders } : {}), sdkworkUnwrapKind: 'item' });
   }
 }
 
@@ -280,18 +280,18 @@ export class LlmForgetRequestsApi {
   }
 
 
-async create(body: LlmForgetRequest, params?: LlmForgetRequestsCreateParams): Promise<LlmForgetJob> {
+async create(body: LlmForgetRequest, params?: LlmForgetRequestsCreateParams, requestOptions?: ApiRequestOptions): Promise<LlmForgetJob> {
     const requestHeaders = buildRequestHeaders(
       {
         'Idempotency-Key': { value: params?.idempotencyKey, style: 'simple', explode: false },
       },
       {}
     );
-    return this.client.post<LlmForgetJob>(appApiPath(`/llm/forget_requests`), body, undefined, requestHeaders, 'application/json');
+    return this.client.request<LlmForgetJob>(appApiPath(`/llm/forget_requests`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'POST' as any, body, contentType: 'application/json', ...(requestHeaders !== undefined ? { headers: requestHeaders } : {}), sdkworkUnwrapKind: 'item' });
   }
 
-async retrieve(forgetRequestId: string): Promise<LlmForgetJob> {
-    return this.client.get<LlmForgetJob>(appApiPath(`/llm/forget_requests/${serializePathParameter(forgetRequestId, { name: 'forgetRequestId', style: 'simple', explode: false })}`));
+async retrieve(forgetRequestId: string, requestOptions?: ApiRequestOptions): Promise<LlmForgetJob> {
+    return this.client.request<LlmForgetJob>(appApiPath(`/llm/forget_requests/${serializePathParameter(forgetRequestId, { name: 'forgetRequestId', style: 'simple', explode: false })}`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'item' });
   }
 }
 
@@ -309,13 +309,13 @@ export class LlmRecordsSourcesApi {
   }
 
 
-async list(recordId: string, params?: LlmRecordsSourcesListParams): Promise<Record<string, unknown>> {
+async list(recordId: string, params?: LlmRecordsSourcesListParams, requestOptions?: ApiRequestOptions): Promise<{ items: LlmRecordSource[]; pageInfo: PageInfo; }> {
     const query = buildQueryString([
       { name: 'q', value: params?.q, style: 'form', explode: true, allowReserved: false },
       { name: 'cursor', value: params?.cursor, style: 'form', explode: true, allowReserved: false },
       { name: 'page_size', value: params?.pageSize, style: 'form', explode: true, allowReserved: false },
     ]);
-    return this.client.get<Record<string, unknown>>(appendQueryString(appApiPath(`/llm/records/${serializePathParameter(recordId, { name: 'recordId', style: 'simple', explode: false })}/sources`), query));
+    return this.client.request<{ items: LlmRecordSource[]; pageInfo: PageInfo; }>(appendQueryString(appApiPath(`/llm/records/${serializePathParameter(recordId, { name: 'recordId', style: 'simple', explode: false })}/sources`), query), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'page' });
   }
 }
 
@@ -341,7 +341,7 @@ export class LlmRecordsApi {
   }
 
 
-async list(params?: LlmRecordsListParams): Promise<Record<string, unknown>> {
+async list(params?: LlmRecordsListParams, requestOptions?: ApiRequestOptions): Promise<{ items: LlmRecord[]; pageInfo: PageInfo; }> {
     const query = buildQueryString([
       { name: 'q', value: params?.q, style: 'form', explode: true, allowReserved: false },
       { name: 'cursor', value: params?.cursor, style: 'form', explode: true, allowReserved: false },
@@ -349,29 +349,29 @@ async list(params?: LlmRecordsListParams): Promise<Record<string, unknown>> {
       { name: 'space_id', value: params?.spaceId, style: 'form', explode: true, allowReserved: false },
       { name: 'record_type', value: params?.recordType, style: 'form', explode: true, allowReserved: false },
     ]);
-    return this.client.get<Record<string, unknown>>(appendQueryString(appApiPath(`/llm/records`), query));
+    return this.client.request<{ items: LlmRecord[]; pageInfo: PageInfo; }>(appendQueryString(appApiPath(`/llm/records`), query), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'page' });
   }
 
-async create(body: LlmRecordRequest, params?: LlmRecordsCreateParams): Promise<LlmRecord> {
+async create(body: LlmRecordRequest, params?: LlmRecordsCreateParams, requestOptions?: ApiRequestOptions): Promise<LlmRecord> {
     const requestHeaders = buildRequestHeaders(
       {
         'Idempotency-Key': { value: params?.idempotencyKey, style: 'simple', explode: false },
       },
       {}
     );
-    return this.client.post<LlmRecord>(appApiPath(`/llm/records`), body, undefined, requestHeaders, 'application/json');
+    return this.client.request<LlmRecord>(appApiPath(`/llm/records`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'POST' as any, body, contentType: 'application/json', ...(requestHeaders !== undefined ? { headers: requestHeaders } : {}), sdkworkUnwrapKind: 'item' });
   }
 
-async retrieve(recordId: string): Promise<LlmRecord> {
-    return this.client.get<LlmRecord>(appApiPath(`/llm/records/${serializePathParameter(recordId, { name: 'recordId', style: 'simple', explode: false })}`));
+async retrieve(recordId: string, requestOptions?: ApiRequestOptions): Promise<LlmRecord> {
+    return this.client.request<LlmRecord>(appApiPath(`/llm/records/${serializePathParameter(recordId, { name: 'recordId', style: 'simple', explode: false })}`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'item' });
   }
 
-async update(recordId: string, body: LlmRecordRequest): Promise<LlmRecord> {
-    return this.client.patch<LlmRecord>(appApiPath(`/llm/records/${serializePathParameter(recordId, { name: 'recordId', style: 'simple', explode: false })}`), body, undefined, undefined, 'application/json');
+async update(recordId: string, body: LlmRecordRequest, requestOptions?: ApiRequestOptions): Promise<LlmRecord> {
+    return this.client.request<LlmRecord>(appApiPath(`/llm/records/${serializePathParameter(recordId, { name: 'recordId', style: 'simple', explode: false })}`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'PATCH' as any, body, contentType: 'application/json', sdkworkUnwrapKind: 'item' });
   }
 
-async delete(recordId: string): Promise<void> {
-    return this.client.delete<void>(appApiPath(`/llm/records/${serializePathParameter(recordId, { name: 'recordId', style: 'simple', explode: false })}`));
+async delete(recordId: string, requestOptions?: ApiRequestOptions): Promise<void> {
+    return this.client.request<void>(appApiPath(`/llm/records/${serializePathParameter(recordId, { name: 'recordId', style: 'simple', explode: false })}`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'DELETE' as any });
   }
 }
 
@@ -387,18 +387,18 @@ export class LlmEventsApi {
   }
 
 
-async create(body: LlmEventRequest, params?: LlmEventsCreateParams): Promise<LlmEvent> {
+async create(body: LlmEventRequest, params?: LlmEventsCreateParams, requestOptions?: ApiRequestOptions): Promise<LlmEvent> {
     const requestHeaders = buildRequestHeaders(
       {
         'Idempotency-Key': { value: params?.idempotencyKey, style: 'simple', explode: false },
       },
       {}
     );
-    return this.client.post<LlmEvent>(appApiPath(`/llm/events`), body, undefined, requestHeaders, 'application/json');
+    return this.client.request<LlmEvent>(appApiPath(`/llm/events`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'POST' as any, body, contentType: 'application/json', ...(requestHeaders !== undefined ? { headers: requestHeaders } : {}), sdkworkUnwrapKind: 'item' });
   }
 
-async retrieve(eventId: string): Promise<LlmEvent> {
-    return this.client.get<LlmEvent>(appApiPath(`/llm/events/${serializePathParameter(eventId, { name: 'eventId', style: 'simple', explode: false })}`));
+async retrieve(eventId: string, requestOptions?: ApiRequestOptions): Promise<LlmEvent> {
+    return this.client.request<LlmEvent>(appApiPath(`/llm/events/${serializePathParameter(eventId, { name: 'eventId', style: 'simple', explode: false })}`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'item' });
   }
 }
 
@@ -420,36 +420,35 @@ export class LlmSpacesApi {
   }
 
 
-async list(params?: LlmSpacesListParams): Promise<Record<string, unknown>> {
+async list(params?: LlmSpacesListParams, requestOptions?: ApiRequestOptions): Promise<{ items: LlmSpace[]; pageInfo: PageInfo; }> {
     const query = buildQueryString([
       { name: 'q', value: params?.q, style: 'form', explode: true, allowReserved: false },
       { name: 'cursor', value: params?.cursor, style: 'form', explode: true, allowReserved: false },
       { name: 'page_size', value: params?.pageSize, style: 'form', explode: true, allowReserved: false },
     ]);
-    return this.client.get<Record<string, unknown>>(appendQueryString(appApiPath(`/llm/spaces`), query));
+    return this.client.request<{ items: LlmSpace[]; pageInfo: PageInfo; }>(appendQueryString(appApiPath(`/llm/spaces`), query), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'page' });
   }
 
-async create(body: LlmSpaceRequest, params?: LlmSpacesCreateParams): Promise<LlmSpace> {
+async create(body: LlmSpaceRequest, params?: LlmSpacesCreateParams, requestOptions?: ApiRequestOptions): Promise<LlmSpace> {
     const requestHeaders = buildRequestHeaders(
       {
         'Idempotency-Key': { value: params?.idempotencyKey, style: 'simple', explode: false },
       },
       {}
     );
-    return this.client.post<LlmSpace>(appApiPath(`/llm/spaces`), body, undefined, requestHeaders, 'application/json');
+    return this.client.request<LlmSpace>(appApiPath(`/llm/spaces`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'POST' as any, body, contentType: 'application/json', ...(requestHeaders !== undefined ? { headers: requestHeaders } : {}), sdkworkUnwrapKind: 'item' });
   }
 
-async retrieve(spaceId: string): Promise<LlmSpace> {
-    return this.client.get<LlmSpace>(appApiPath(`/llm/spaces/${serializePathParameter(spaceId, { name: 'spaceId', style: 'simple', explode: false })}`));
+async retrieve(spaceId: string, requestOptions?: ApiRequestOptions): Promise<LlmSpace> {
+    return this.client.request<LlmSpace>(appApiPath(`/llm/spaces/${serializePathParameter(spaceId, { name: 'spaceId', style: 'simple', explode: false })}`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'GET' as any, sdkworkUnwrapKind: 'item' });
   }
 
-async update(spaceId: string, body: LlmSpaceRequest): Promise<LlmSpace> {
-    return this.client.patch<LlmSpace>(appApiPath(`/llm/spaces/${serializePathParameter(spaceId, { name: 'spaceId', style: 'simple', explode: false })}`), body, undefined, undefined, 'application/json');
+async update(spaceId: string, body: LlmSpaceRequest, requestOptions?: ApiRequestOptions): Promise<LlmSpace> {
+    return this.client.request<LlmSpace>(appApiPath(`/llm/spaces/${serializePathParameter(spaceId, { name: 'spaceId', style: 'simple', explode: false })}`), { ...(requestOptions?.signal !== undefined ? { signal: requestOptions.signal } : {}), ...(requestOptions?.timeout !== undefined ? { timeout: requestOptions.timeout } : {}), method: 'PATCH' as any, body, contentType: 'application/json', sdkworkUnwrapKind: 'item' });
   }
 }
 
 export class LlmApi {
-  private client: HttpClient;
   public readonly spaces: LlmSpacesApi;
   public readonly events: LlmEventsApi;
   public readonly records: LlmRecordsApi;
@@ -464,7 +463,6 @@ export class LlmApi {
   public readonly learningSettings: LlmLearningSettingsApi;
 
   constructor(client: HttpClient) {
-    this.client = client;
     this.spaces = new LlmSpacesApi(client);
     this.events = new LlmEventsApi(client);
     this.records = new LlmRecordsApi(client);

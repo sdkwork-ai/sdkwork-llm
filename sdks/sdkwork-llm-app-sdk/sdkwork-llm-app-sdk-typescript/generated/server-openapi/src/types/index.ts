@@ -83,13 +83,13 @@ export type { ForgetRequestsRetrieveResponse } from './forget-requests-retrieve-
 export type { ExtractionsCreateResponse201 } from './extractions-create-response201';
 export type { CandidatesListResponse } from './candidates-list-response';
 export type { CandidatesRetrieveResponse } from './candidates-retrieve-response';
-export type { CandidatesApproveResponse201 } from './candidates-approve-response201';
-export type { CandidatesRejectResponse201 } from './candidates-reject-response201';
+export type { CandidatesApproveResponse } from './candidates-approve-response';
+export type { CandidatesRejectResponse } from './candidates-reject-response';
 export type { HabitsListResponse } from './habits-list-response';
 export type { HabitsRetrieveResponse } from './habits-retrieve-response';
 export type { HabitsUpdateResponse } from './habits-update-response';
-export type { HabitsConfirmResponse201 } from './habits-confirm-response201';
-export type { HabitsRejectResponse201 } from './habits-reject-response201';
+export type { HabitsConfirmResponse } from './habits-confirm-response';
+export type { HabitsRejectResponse } from './habits-reject-response';
 export type { RetrievalsCreateResponse201 } from './retrievals-create-response201';
 export type { RetrievalsRetrieveResponse } from './retrievals-retrieve-response';
 export type { ContextPacksCreateResponse201 } from './context-packs-create-response201';

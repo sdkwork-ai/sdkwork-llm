@@ -9,35 +9,23 @@
     "protocol": "http",
     "packageName": "@sdkwork/llm-app-sdk"
   },
-  "changeFingerprint": "eca2393b70b796d0559d1b4e9b05c618fbd8f867da7b3d9954690ad26ce79dd9",
+  "changeFingerprint": "439170101bcc4752226e26445ce8dc407b92c1f04496ae8ab16bf2732664013a",
   "changes": {
-    "createdGeneratedFiles": [],
-    "updatedGeneratedFiles": [],
-    "unchangedGeneratedFiles": [
+    "createdGeneratedFiles": [
+      "src/types/candidates-approve-response.ts",
+      "src/types/candidates-reject-response.ts",
+      "src/types/habits-confirm-response.ts",
+      "src/types/habits-reject-response.ts"
+    ],
+    "updatedGeneratedFiles": [
       "bin/publish-core.mjs",
-      "bin/publish.ps1",
-      "bin/publish.sh",
-      "bin/sdk-gen.bat",
-      "bin/sdk-gen.sh",
-      "CHANGELOG.md",
-      "LICENSE",
       "package.json",
       "README.md",
-      "sdkwork-sdk.json",
       "src/api/base.ts",
-      "src/api/index.ts",
       "src/api/llm.ts",
-      "src/api/paths.ts",
-      "src/auth/index.ts",
       "src/http/client.ts",
-      "src/http/index.ts",
-      "src/index.ts",
-      "src/sdk.ts",
-      "src/types/candidates-approve-response201.ts",
       "src/types/candidates-list-response.ts",
-      "src/types/candidates-reject-response201.ts",
       "src/types/candidates-retrieve-response.ts",
-      "src/types/common.ts",
       "src/types/context-packs-create-response201.ts",
       "src/types/context-packs-retrieve-response.ts",
       "src/types/events-create-response201.ts",
@@ -49,14 +37,40 @@
       "src/types/field-error.ts",
       "src/types/forget-requests-create-response201.ts",
       "src/types/forget-requests-retrieve-response.ts",
-      "src/types/habits-confirm-response201.ts",
       "src/types/habits-list-response.ts",
-      "src/types/habits-reject-response201.ts",
       "src/types/habits-retrieve-response.ts",
       "src/types/habits-update-response.ts",
       "src/types/index.ts",
       "src/types/learning-settings-retrieve-response.ts",
       "src/types/learning-settings-update-response.ts",
+      "src/types/problem-detail.ts",
+      "src/types/records-create-response201.ts",
+      "src/types/records-list-response.ts",
+      "src/types/records-retrieve-response.ts",
+      "src/types/records-sources-list-response.ts",
+      "src/types/records-update-response.ts",
+      "src/types/retrievals-create-response201.ts",
+      "src/types/retrievals-retrieve-response.ts",
+      "src/types/spaces-create-response201.ts",
+      "src/types/spaces-list-response.ts",
+      "src/types/spaces-retrieve-response.ts",
+      "src/types/spaces-update-response.ts"
+    ],
+    "unchangedGeneratedFiles": [
+      "bin/publish.ps1",
+      "bin/publish.sh",
+      "bin/sdk-gen.bat",
+      "bin/sdk-gen.sh",
+      "CHANGELOG.md",
+      "LICENSE",
+      "sdkwork-sdk.json",
+      "src/api/index.ts",
+      "src/api/paths.ts",
+      "src/auth/index.ts",
+      "src/http/index.ts",
+      "src/index.ts",
+      "src/sdk.ts",
+      "src/types/common.ts",
       "src/types/llm-audit-log-list.ts",
       "src/types/llm-audit-log.ts",
       "src/types/llm-candidate-list.ts",
@@ -114,15 +128,7 @@
       "src/types/llm-space-request.ts",
       "src/types/llm-space.ts",
       "src/types/page-info.ts",
-      "src/types/problem-detail.ts",
       "src/types/problem-details.ts",
-      "src/types/records-create-response201.ts",
-      "src/types/records-list-response.ts",
-      "src/types/records-retrieve-response.ts",
-      "src/types/records-sources-list-response.ts",
-      "src/types/records-update-response.ts",
-      "src/types/retrievals-create-response201.ts",
-      "src/types/retrievals-retrieve-response.ts",
       "src/types/sdk-work-api-response.ts",
       "src/types/sdk-work-command-data.ts",
       "src/types/sdk-work-command-response.ts",
@@ -131,42 +137,169 @@
       "src/types/sdk-work-platform-error-code.ts",
       "src/types/sdk-work-resource-data.ts",
       "src/types/sdk-work-resource-response.ts",
-      "src/types/spaces-create-response201.ts",
-      "src/types/spaces-list-response.ts",
-      "src/types/spaces-retrieve-response.ts",
-      "src/types/spaces-update-response.ts",
       "tsconfig.json"
     ],
-    "deletedGeneratedFiles": [],
+    "deletedGeneratedFiles": [
+      "src/types/candidates-approve-response201.ts",
+      "src/types/candidates-reject-response201.ts",
+      "src/types/habits-confirm-response201.ts",
+      "src/types/habits-reject-response201.ts"
+    ],
     "scaffoldedFiles": [],
     "preservedScaffoldFiles": [
       "custom/build-runtime.mjs",
       "custom/README.md"
     ],
-    "backedUpFiles": []
+    "backedUpFiles": [
+      "package.json"
+    ]
   },
   "impact": {
     "schemaVersion": 1,
-    "areas": [],
-    "details": [],
-    "requiresVerification": false,
-    "summary": "No generated, scaffold, or backup changes detected. Verification can be skipped."
+    "areas": [
+      "api-surface",
+      "models",
+      "runtime",
+      "build-metadata",
+      "publish-workflow",
+      "documentation"
+    ],
+    "details": [
+      {
+        "area": "api-surface",
+        "paths": [
+          "src/api/base.ts",
+          "src/api/llm.ts",
+          "src/http/client.ts"
+        ]
+      },
+      {
+        "area": "models",
+        "paths": [
+          "src/types/candidates-approve-response.ts",
+          "src/types/candidates-approve-response201.ts",
+          "src/types/candidates-list-response.ts",
+          "src/types/candidates-reject-response.ts",
+          "src/types/candidates-reject-response201.ts",
+          "src/types/candidates-retrieve-response.ts",
+          "src/types/context-packs-create-response201.ts",
+          "src/types/context-packs-retrieve-response.ts",
+          "src/types/events-create-response201.ts",
+          "src/types/events-retrieve-response.ts",
+          "src/types/export-jobs-create-response201.ts",
+          "src/types/export-jobs-retrieve-response.ts",
+          "src/types/extractions-create-response201.ts",
+          "src/types/feedback-create-response201.ts",
+          "src/types/field-error.ts",
+          "src/types/forget-requests-create-response201.ts",
+          "src/types/forget-requests-retrieve-response.ts",
+          "src/types/habits-confirm-response.ts",
+          "src/types/habits-confirm-response201.ts",
+          "src/types/habits-list-response.ts",
+          "src/types/habits-reject-response.ts",
+          "src/types/habits-reject-response201.ts",
+          "src/types/habits-retrieve-response.ts",
+          "src/types/habits-update-response.ts",
+          "src/types/index.ts",
+          "src/types/learning-settings-retrieve-response.ts",
+          "src/types/learning-settings-update-response.ts",
+          "src/types/problem-detail.ts",
+          "src/types/records-create-response201.ts",
+          "src/types/records-list-response.ts",
+          "src/types/records-retrieve-response.ts",
+          "src/types/records-sources-list-response.ts",
+          "src/types/records-update-response.ts",
+          "src/types/retrievals-create-response201.ts",
+          "src/types/retrievals-retrieve-response.ts",
+          "src/types/spaces-create-response201.ts",
+          "src/types/spaces-list-response.ts",
+          "src/types/spaces-retrieve-response.ts",
+          "src/types/spaces-update-response.ts"
+        ]
+      },
+      {
+        "area": "runtime",
+        "paths": [
+          "src/http/client.ts"
+        ]
+      },
+      {
+        "area": "build-metadata",
+        "paths": [
+          "package.json"
+        ]
+      },
+      {
+        "area": "publish-workflow",
+        "paths": [
+          "bin/publish-core.mjs"
+        ]
+      },
+      {
+        "area": "documentation",
+        "paths": [
+          "README.md"
+        ]
+      }
+    ],
+    "requiresVerification": true,
+    "summary": "Detected impact areas: api-surface, models, runtime, build-metadata, publish-workflow, documentation. Verification is required."
   },
   "verificationPlan": {
-    "shouldRun": false,
-    "runPhase": "skip",
-    "summary": "No generated, scaffold, or backup changes detected. Verification can be skipped.",
-    "steps": []
+    "shouldRun": true,
+    "runPhase": "now",
+    "summary": "Detected impact areas: api-surface, models, runtime, build-metadata, publish-workflow, documentation. Verification is required. Run the required verification commands now against the generated SDK output.",
+    "steps": [
+      {
+        "id": "check",
+        "title": "Unified package check",
+        "required": true,
+        "rationale": "Validate the generated package with the unified publish helper. Triggered by: api-surface, models, runtime, build-metadata, publish-workflow, documentation.",
+        "workingDirectory": "E:\\sdkwork-space\\sdkwork-llm\\sdks\\sdkwork-llm-app-sdk\\sdkwork-llm-app-sdk-typescript\\generated\\server-openapi",
+        "command": "node",
+        "args": [
+          "./bin/publish-core.mjs",
+          "--language",
+          "typescript",
+          "--project-dir",
+          ".",
+          "--action",
+          "check"
+        ],
+        "displayCommand": "node ./bin/publish-core.mjs --language typescript --project-dir . --action check"
+      },
+      {
+        "id": "build",
+        "title": "Unified package build",
+        "required": true,
+        "rationale": "Run the full package build because this language uses a lighter check path than the final build. Triggered by: api-surface, models, runtime, build-metadata, publish-workflow, documentation.",
+        "workingDirectory": "E:\\sdkwork-space\\sdkwork-llm\\sdks\\sdkwork-llm-app-sdk\\sdkwork-llm-app-sdk-typescript\\generated\\server-openapi",
+        "command": "node",
+        "args": [
+          "./bin/publish-core.mjs",
+          "--language",
+          "typescript",
+          "--project-dir",
+          ".",
+          "--action",
+          "build"
+        ],
+        "displayCommand": "node ./bin/publish-core.mjs --language typescript --project-dir . --action build"
+      }
+    ]
   },
   "executionDecision": {
     "schemaVersion": 1,
-    "riskLevel": "low",
-    "nextAction": "skip",
+    "riskLevel": "high",
+    "nextAction": "verify",
     "requiresManualReview": false,
     "applyRequiresExpectedFingerprint": false,
-    "summary": "No actionable changes were detected. No apply or verification step is required.",
+    "summary": "Changes have been applied. Run the required verification plan now.",
     "reasons": [
-      "no-actionable-changes"
+      "backed-up-generated-files",
+      "deleted-generated-files",
+      "manual-review-required",
+      "verification-required"
     ]
   },
   "preservedLegacyFiles": false
