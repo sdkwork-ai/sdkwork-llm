@@ -15,7 +15,6 @@ const { values } = parseArgs({
   options: {
     target: { type: "string", default: "server" },
     "deployment-profile": { type: "string", default: "standalone" },
-    "service-layout": { type: "string", default: "unified-process" },
     database: { type: "string", default: "sqlite" },
     "dev-env-file": { type: "string" },
   },
@@ -23,7 +22,7 @@ const { values } = parseArgs({
 
 const profileId =
   values["dev-env-file"] == null
-    ? resolveDevProfileId(values["deployment-profile"], values["service-layout"])
+    ? resolveDevProfileId(values["deployment-profile"])
     : (loadEnvFile(values["dev-env-file"], REPO_ROOT).SDKWORK_LLM_PROFILE_ID
       ?? DEFAULT_DEV_PROFILE_ID);
 
@@ -34,13 +33,12 @@ const profileEnv = values["dev-env-file"]
 const runtimeEnv = mergeRuntimeEnv(process.env, profileEnv, {
   SDKWORK_LLM_RUNTIME_TARGET: values.target,
   SDKWORK_LLM_DEPLOYMENT_PROFILE: values["deployment-profile"],
-  SDKWORK_LLM_SERVICE_LAYOUT: values["service-layout"],
   SDKWORK_LLM_DATABASE: values.database,
   SDKWORK_LLM_PROFILE_ID: profileId,
 });
 
 console.log(
-  `Starting SDKWork LLM dev server (${values.target}, ${values.database}, ${values["deployment-profile"]}, ${values["service-layout"]}, profile=${profileId})`,
+  `Starting SDKWork LLM dev server (${values.target}, ${values.database}, ${values["deployment-profile"]}, profile=${profileId})`,
 );
 
 const child = spawn("cargo", ["run", "-p", "sdkwork-api-llm-standalone-gateway"], {

@@ -47,7 +47,7 @@ foreach ($profileId in @($topologySpec.defaults.developmentProfileId, $topologyS
     Assert-PathExists $profilePath "Missing topology profile file for $profileId"
 }
 
-Assert-PathExists "configs/topology/standalone.unified-process.development.env" "Missing development topology profile"
+Assert-PathExists "etc/topology/standalone.development.env" "Missing development topology profile"
 
 $requiredRootDirectories = @(
     "apis", "apps", "crates", "sdks", "tools", "configs", "deployments",

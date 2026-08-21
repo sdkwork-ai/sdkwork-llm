@@ -271,7 +271,7 @@ assert(
 );
 
 const topologySpec = readJson('specs/topology.spec.json');
-assert(topologySpec.schemaVersion === 2, 'specs/topology.spec.json schemaVersion must be 2');
+assert(topologySpec.schemaVersion === 5, 'specs/topology.spec.json schemaVersion must be 5');
 assert(topologySpec.archetype === 'application-http-gateway', 'topology archetype must be application-http-gateway');
 for (const profileId of [
   topologySpec.defaults?.developmentProfileId,
@@ -288,8 +288,8 @@ for (const profileId of [
   );
 }
 assert(
-  fs.existsSync(path.join(repoRoot, 'configs/topology/standalone.unified-process.production.env')),
-  'configs/topology/standalone.unified-process.production.env must exist',
+  fs.existsSync(path.join(repoRoot, 'etc/topology/standalone.production.env')),
+  'etc/topology/standalone.production.env must exist',
 );
 assert(
   fs.existsSync(path.join(repoRoot, 'sdks/test/verify-sdk-ownership-boundaries.test.mjs')),

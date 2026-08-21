@@ -36,8 +36,6 @@ spec:
               value: production
             - name: SDKWORK_LLM_DEPLOYMENT_PROFILE
               value: standalone
-            - name: SDKWORK_LLM_SERVICE_LAYOUT
-              value: unified-process
             - name: SDKWORK_LLM_RUNTIME_TARGET
               value: container
             - name: SDKWORK_LLM_APPLICATION_PUBLIC_INGRESS_BIND

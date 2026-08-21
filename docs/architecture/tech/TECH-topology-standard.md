@@ -1,5 +1,6 @@
-> Migrated from `docs/topology-standard.md` on 2026-06-24.
-> Owner: SDKWork maintainers
+> Migrated from `docs/topology-standard.md`.
+
+# SDKWork LLM Runtime Topology
 
 This repository adopts the shared SDKWork runtime topology framework.
 
@@ -10,11 +11,11 @@ This repository adopts the shared SDKWork runtime topology framework.
 
 ## Archetype
 
-`application-http-gateway`: Memory exposes open, app, and backend HTTP surfaces through `sdkwork-routes-memory-*` route crates. Phase 1 runs all surfaces in a unified `sdkwork-api-llm-standalone-gateway` process.
+`application-http-gateway`: LLM exposes open, app, and backend HTTP surfaces through `sdkwork-routes-llm-*` route crates. Surfaces bind through `sdkwork-api-llm-standalone-gateway`.
 
 ## Default Dev Profile
 
-`standalone.unified-process.development`
+`standalone.development`
 
 ```bash
 pnpm dev
@@ -38,9 +39,8 @@ Client env keys:
 - `VITE_SDKWORK_LLM_APPLICATION_BACKEND_HTTP_URL`: backend SDK surface.
 - `VITE_SDKWORK_LLM_APPLICATION_OPEN_HTTP_URL`: open SDK surface.
 
-Profile values live in `configs/topology/*.env` only.
+Profile values live in `etc/topology/*.env` only.
 
-## Phase 1 Notes
+## Notes
 
-Cloud split-services profiles and API gateway bundles are deferred until Memory moves to split-service deployment. Unified-process profiles bind all surfaces to the same host/port.
-
+Active profile ids use `<deploymentProfile>.<environment>` (`standalone` / `cloud` × `development` / `test` / `staging` / `production`). All surfaces share the standalone gateway bind in current profiles.
