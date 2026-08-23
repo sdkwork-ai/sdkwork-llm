@@ -1,6 +1,5 @@
 version: 2
 defaultProfile: cloud.production
-
 profiles:
   cloud.development:
     deployment:
@@ -17,17 +16,64 @@ profiles:
     install:
       layout: binary-package
     expose:
-      - domain: memory-dev.sdkwork.com
+      - domain: llm-admin-dev.sdkwork.com
         tls: sdkwork.com
         mode: web+api
         web: adaptive
+        aliases:
+          - llm-app-dev.sdkwork.com
+          - llm-dev.sdkwork.com
+          - llm-open-dev.sdkwork.com
+          - mem-dev.sdkwork.com
+          - memory-admin-dev.sdkwork.com
+          - memory-app-dev.sdkwork.com
+          - memory-dev.sdkwork.com
+      - domain: llm-admin-dev.birdcoder.com
+        tls: birdcoder.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.birdcoder.com
+          - llm-dev.birdcoder.com
+          - llm-open-dev.birdcoder.com
+      - domain: llm-admin-dev.dtupay.com
+        tls: dtupay.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.dtupay.com
+          - llm-dev.dtupay.com
+          - llm-open-dev.dtupay.com
+      - domain: llm-admin-dev.sdkwork.cn
+        tls: sdkwork.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.sdkwork.cn
+          - llm-dev.sdkwork.cn
+          - llm-open-dev.sdkwork.cn
+      - domain: llm-admin-dev.birdcoder.cn
+        tls: birdcoder.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.birdcoder.cn
+          - llm-dev.birdcoder.cn
+          - llm-open-dev.birdcoder.cn
+      - domain: llm-admin-dev.dtupay.cn
+        tls: dtupay.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.dtupay.cn
+          - llm-dev.dtupay.cn
+          - llm-open-dev.dtupay.cn
     packages: []
     overrides:
       topology:
         spec: specs/topology.spec.json
         profile: cloud.development
         env: etc/topology/cloud.development.env
-
   cloud.production:
     deployment:
       deploymentProfile: cloud
@@ -43,17 +89,64 @@ profiles:
     install:
       layout: binary-package
     expose:
-      - domain: memory.sdkwork.com
+      - domain: llm-admin.sdkwork.com
         tls: sdkwork.com
         mode: web+api
         web: adaptive
+        aliases:
+          - llm-app.sdkwork.com
+          - llm-open.sdkwork.com
+          - llm.sdkwork.com
+          - mem.sdkwork.com
+          - memory-admin.sdkwork.com
+          - memory-app.sdkwork.com
+          - memory.sdkwork.com
+      - domain: llm-admin.birdcoder.com
+        tls: birdcoder.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.birdcoder.com
+          - llm-open.birdcoder.com
+          - llm.birdcoder.com
+      - domain: llm-admin.dtupay.com
+        tls: dtupay.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.dtupay.com
+          - llm-open.dtupay.com
+          - llm.dtupay.com
+      - domain: llm-admin.sdkwork.cn
+        tls: sdkwork.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.sdkwork.cn
+          - llm-open.sdkwork.cn
+          - llm.sdkwork.cn
+      - domain: llm-admin.birdcoder.cn
+        tls: birdcoder.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.birdcoder.cn
+          - llm-open.birdcoder.cn
+          - llm.birdcoder.cn
+      - domain: llm-admin.dtupay.cn
+        tls: dtupay.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.dtupay.cn
+          - llm-open.dtupay.cn
+          - llm.dtupay.cn
     packages: []
     overrides:
       topology:
         spec: specs/topology.spec.json
         profile: cloud.production
         env: etc/topology/cloud.production.env
-
   standalone.development:
     deployment:
       deploymentProfile: standalone
@@ -69,17 +162,64 @@ profiles:
     install:
       layout: binary-package
     expose:
-      - domain: memory-dev.sdkwork.com
+      - domain: llm-admin-dev.sdkwork.com
         tls: sdkwork.com
         mode: web+api
         web: adaptive
+        aliases:
+          - llm-app-dev.sdkwork.com
+          - llm-dev.sdkwork.com
+          - llm-open-dev.sdkwork.com
+          - mem-dev.sdkwork.com
+          - memory-admin-dev.sdkwork.com
+          - memory-app-dev.sdkwork.com
+          - memory-dev.sdkwork.com
+      - domain: llm-admin-dev.birdcoder.com
+        tls: birdcoder.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.birdcoder.com
+          - llm-dev.birdcoder.com
+          - llm-open-dev.birdcoder.com
+      - domain: llm-admin-dev.dtupay.com
+        tls: dtupay.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.dtupay.com
+          - llm-dev.dtupay.com
+          - llm-open-dev.dtupay.com
+      - domain: llm-admin-dev.sdkwork.cn
+        tls: sdkwork.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.sdkwork.cn
+          - llm-dev.sdkwork.cn
+          - llm-open-dev.sdkwork.cn
+      - domain: llm-admin-dev.birdcoder.cn
+        tls: birdcoder.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.birdcoder.cn
+          - llm-dev.birdcoder.cn
+          - llm-open-dev.birdcoder.cn
+      - domain: llm-admin-dev.dtupay.cn
+        tls: dtupay.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.dtupay.cn
+          - llm-dev.dtupay.cn
+          - llm-open-dev.dtupay.cn
     packages: []
     overrides:
       topology:
         spec: specs/topology.spec.json
         profile: standalone.development
         env: etc/topology/standalone.development.env
-
   standalone.production:
     deployment:
       deploymentProfile: standalone
@@ -95,10 +235,58 @@ profiles:
     install:
       layout: binary-package
     expose:
-      - domain: memory.sdkwork.com
+      - domain: llm-admin.sdkwork.com
         tls: sdkwork.com
         mode: web+api
         web: adaptive
+        aliases:
+          - llm-app.sdkwork.com
+          - llm-open.sdkwork.com
+          - llm.sdkwork.com
+          - mem.sdkwork.com
+          - memory-admin.sdkwork.com
+          - memory-app.sdkwork.com
+          - memory.sdkwork.com
+      - domain: llm-admin.birdcoder.com
+        tls: birdcoder.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.birdcoder.com
+          - llm-open.birdcoder.com
+          - llm.birdcoder.com
+      - domain: llm-admin.dtupay.com
+        tls: dtupay.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.dtupay.com
+          - llm-open.dtupay.com
+          - llm.dtupay.com
+      - domain: llm-admin.sdkwork.cn
+        tls: sdkwork.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.sdkwork.cn
+          - llm-open.sdkwork.cn
+          - llm.sdkwork.cn
+      - domain: llm-admin.birdcoder.cn
+        tls: birdcoder.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.birdcoder.cn
+          - llm-open.birdcoder.cn
+          - llm.birdcoder.cn
+      - domain: llm-admin.dtupay.cn
+        tls: dtupay.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.dtupay.cn
+          - llm-open.dtupay.cn
+          - llm.dtupay.cn
     packages: []
     overrides:
       topology:

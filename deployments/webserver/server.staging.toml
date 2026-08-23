@@ -1,0 +1,60 @@
+environment = "staging"
+
+[http]
+
+[http.certificates]
+
+[http.certificates."sdkwork.com"]
+certFile = "/opt/certs/letsencrypt/live/sdkwork.com/fullchain.pem"
+certKeyFile = "/opt/certs/letsencrypt/live/sdkwork.com/privkey.pem"
+chainFile = "/opt/certs/letsencrypt/live/sdkwork.com/chain.pem"
+ocspStapling = true
+
+[http.certificates."birdcoder.com"]
+certFile = "/opt/certs/letsencrypt/live/birdcoder.com/fullchain.pem"
+certKeyFile = "/opt/certs/letsencrypt/live/birdcoder.com/privkey.pem"
+chainFile = "/opt/certs/letsencrypt/live/birdcoder.com/chain.pem"
+ocspStapling = true
+
+[http.certificates."dtupay.com"]
+certFile = "/opt/certs/letsencrypt/live/dtupay.com/fullchain.pem"
+certKeyFile = "/opt/certs/letsencrypt/live/dtupay.com/privkey.pem"
+chainFile = "/opt/certs/letsencrypt/live/dtupay.com/chain.pem"
+ocspStapling = true
+
+[http.certificates."sdkwork.cn"]
+certFile = "/opt/certs/letsencrypt/live/sdkwork.cn/fullchain.pem"
+certKeyFile = "/opt/certs/letsencrypt/live/sdkwork.cn/privkey.pem"
+chainFile = "/opt/certs/letsencrypt/live/sdkwork.cn/chain.pem"
+ocspStapling = true
+
+[http.certificates."birdcoder.cn"]
+certFile = "/opt/certs/letsencrypt/live/birdcoder.cn/fullchain.pem"
+certKeyFile = "/opt/certs/letsencrypt/live/birdcoder.cn/privkey.pem"
+chainFile = "/opt/certs/letsencrypt/live/birdcoder.cn/chain.pem"
+ocspStapling = true
+
+[http.certificates."dtupay.cn"]
+certFile = "/opt/certs/letsencrypt/live/dtupay.cn/fullchain.pem"
+certKeyFile = "/opt/certs/letsencrypt/live/dtupay.cn/privkey.pem"
+chainFile = "/opt/certs/letsencrypt/live/dtupay.cn/chain.pem"
+ocspStapling = true
+
+[[http.server]]
+listen = ["80"]
+serverName = ["llm-staging.sdkwork.com", "llm-staging.birdcoder.com", "llm-staging.dtupay.com", "llm-staging.sdkwork.cn", "llm-staging.birdcoder.cn", "llm-staging.dtupay.cn", "memory-staging.sdkwork.com", "llm-app-staging.sdkwork.com", "llm-app-staging.birdcoder.com", "llm-app-staging.dtupay.com", "llm-app-staging.sdkwork.cn", "llm-app-staging.birdcoder.cn", "llm-app-staging.dtupay.cn", "memory-app-staging.sdkwork.com", "llm-admin-staging.sdkwork.com", "llm-admin-staging.birdcoder.com", "llm-admin-staging.dtupay.com", "llm-admin-staging.sdkwork.cn", "llm-admin-staging.birdcoder.cn", "llm-admin-staging.dtupay.cn", "memory-admin-staging.sdkwork.com", "llm-open-staging.sdkwork.com", "llm-open-staging.birdcoder.com", "llm-open-staging.dtupay.com", "llm-open-staging.sdkwork.cn", "llm-open-staging.birdcoder.cn", "llm-open-staging.dtupay.cn", "mem-staging.sdkwork.com"]
+
+[[http.server.location]]
+match = "/api/"
+proxyPass = "http://gateway"
+proxyHttpVersion = "1.1"
+proxySetHeader = ["Host $host", "X-Forwarded-For $proxy_add_x_forwarded_for", "X-Forwarded-Proto $scheme"]
+
+[[http.server.location]]
+match = "/"
+proxyPass = "http://gateway"
+proxyHttpVersion = "1.1"
+proxySetHeader = ["Host $host", "X-Forwarded-For $proxy_add_x_forwarded_for", "X-Forwarded-Proto $scheme"]
+proxyBuffering = false
+proxyReadTimeout = "300s"
+
