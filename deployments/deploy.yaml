@@ -68,6 +68,70 @@ profiles:
           - llm-app-dev.dtupay.cn
           - llm-dev.dtupay.cn
           - llm-open-dev.dtupay.cn
+      - domain: llm-admin-dev.skubc.com
+        tls: skubc.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.skubc.com
+          - llm-dev.skubc.com
+          - llm-open-dev.skubc.com
+      - domain: llm-admin-dev.skubc.cn
+        tls: skubc.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.skubc.cn
+          - llm-dev.skubc.cn
+          - llm-open-dev.skubc.cn
+      - domain: llm-admin-dev.zowalk.com
+        tls: zowalk.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.zowalk.com
+          - llm-dev.zowalk.com
+          - llm-open-dev.zowalk.com
+      - domain: llm-admin-dev.zowalk.cn
+        tls: zowalk.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.zowalk.cn
+          - llm-dev.zowalk.cn
+          - llm-open-dev.zowalk.cn
+      - domain: llm-admin-dev.offer86.com
+        tls: offer86.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.offer86.com
+          - llm-dev.offer86.com
+          - llm-open-dev.offer86.com
+      - domain: llm-admin-dev.offer86.cn
+        tls: offer86.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.offer86.cn
+          - llm-dev.offer86.cn
+          - llm-open-dev.offer86.cn
+      - domain: llm-admin-dev.86offer.com
+        tls: 86offer.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.86offer.com
+          - llm-dev.86offer.com
+          - llm-open-dev.86offer.com
+      - domain: llm-admin-dev.86offer.cn
+        tls: 86offer.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.86offer.cn
+          - llm-dev.86offer.cn
+          - llm-open-dev.86offer.cn
     packages: []
     overrides:
       topology:
@@ -141,6 +205,70 @@ profiles:
           - llm-app.dtupay.cn
           - llm-open.dtupay.cn
           - llm.dtupay.cn
+      - domain: llm-admin.skubc.com
+        tls: skubc.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.skubc.com
+          - llm-open.skubc.com
+          - llm.skubc.com
+      - domain: llm-admin.skubc.cn
+        tls: skubc.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.skubc.cn
+          - llm-open.skubc.cn
+          - llm.skubc.cn
+      - domain: llm-admin.zowalk.com
+        tls: zowalk.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.zowalk.com
+          - llm-open.zowalk.com
+          - llm.zowalk.com
+      - domain: llm-admin.zowalk.cn
+        tls: zowalk.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.zowalk.cn
+          - llm-open.zowalk.cn
+          - llm.zowalk.cn
+      - domain: llm-admin.offer86.com
+        tls: offer86.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.offer86.com
+          - llm-open.offer86.com
+          - llm.offer86.com
+      - domain: llm-admin.offer86.cn
+        tls: offer86.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.offer86.cn
+          - llm-open.offer86.cn
+          - llm.offer86.cn
+      - domain: llm-admin.86offer.com
+        tls: 86offer.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.86offer.com
+          - llm-open.86offer.com
+          - llm.86offer.com
+      - domain: llm-admin.86offer.cn
+        tls: 86offer.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.86offer.cn
+          - llm-open.86offer.cn
+          - llm.86offer.cn
     packages: []
     overrides:
       topology:
@@ -214,6 +342,70 @@ profiles:
           - llm-app-dev.dtupay.cn
           - llm-dev.dtupay.cn
           - llm-open-dev.dtupay.cn
+      - domain: llm-admin-dev.skubc.com
+        tls: skubc.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.skubc.com
+          - llm-dev.skubc.com
+          - llm-open-dev.skubc.com
+      - domain: llm-admin-dev.skubc.cn
+        tls: skubc.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.skubc.cn
+          - llm-dev.skubc.cn
+          - llm-open-dev.skubc.cn
+      - domain: llm-admin-dev.zowalk.com
+        tls: zowalk.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.zowalk.com
+          - llm-dev.zowalk.com
+          - llm-open-dev.zowalk.com
+      - domain: llm-admin-dev.zowalk.cn
+        tls: zowalk.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.zowalk.cn
+          - llm-dev.zowalk.cn
+          - llm-open-dev.zowalk.cn
+      - domain: llm-admin-dev.offer86.com
+        tls: offer86.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.offer86.com
+          - llm-dev.offer86.com
+          - llm-open-dev.offer86.com
+      - domain: llm-admin-dev.offer86.cn
+        tls: offer86.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.offer86.cn
+          - llm-dev.offer86.cn
+          - llm-open-dev.offer86.cn
+      - domain: llm-admin-dev.86offer.com
+        tls: 86offer.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.86offer.com
+          - llm-dev.86offer.com
+          - llm-open-dev.86offer.com
+      - domain: llm-admin-dev.86offer.cn
+        tls: 86offer.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app-dev.86offer.cn
+          - llm-dev.86offer.cn
+          - llm-open-dev.86offer.cn
     packages: []
     overrides:
       topology:
@@ -287,6 +479,70 @@ profiles:
           - llm-app.dtupay.cn
           - llm-open.dtupay.cn
           - llm.dtupay.cn
+      - domain: llm-admin.skubc.com
+        tls: skubc.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.skubc.com
+          - llm-open.skubc.com
+          - llm.skubc.com
+      - domain: llm-admin.skubc.cn
+        tls: skubc.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.skubc.cn
+          - llm-open.skubc.cn
+          - llm.skubc.cn
+      - domain: llm-admin.zowalk.com
+        tls: zowalk.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.zowalk.com
+          - llm-open.zowalk.com
+          - llm.zowalk.com
+      - domain: llm-admin.zowalk.cn
+        tls: zowalk.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.zowalk.cn
+          - llm-open.zowalk.cn
+          - llm.zowalk.cn
+      - domain: llm-admin.offer86.com
+        tls: offer86.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.offer86.com
+          - llm-open.offer86.com
+          - llm.offer86.com
+      - domain: llm-admin.offer86.cn
+        tls: offer86.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.offer86.cn
+          - llm-open.offer86.cn
+          - llm.offer86.cn
+      - domain: llm-admin.86offer.com
+        tls: 86offer.com
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.86offer.com
+          - llm-open.86offer.com
+          - llm.86offer.com
+      - domain: llm-admin.86offer.cn
+        tls: 86offer.cn
+        mode: web+api
+        web: adaptive
+        aliases:
+          - llm-app.86offer.cn
+          - llm-open.86offer.cn
+          - llm.86offer.cn
     packages: []
     overrides:
       topology:

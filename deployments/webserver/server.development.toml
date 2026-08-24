@@ -2,59 +2,8 @@ environment = "development"
 
 [http]
 
-[http.certificates]
-
-[http.certificates."sdkwork.com"]
-certFile = "/opt/certs/letsencrypt/live/sdkwork.com/fullchain.pem"
-certKeyFile = "/opt/certs/letsencrypt/live/sdkwork.com/privkey.pem"
-chainFile = "/opt/certs/letsencrypt/live/sdkwork.com/chain.pem"
-ocspStapling = true
-
-[http.certificates."birdcoder.com"]
-certFile = "/opt/certs/letsencrypt/live/birdcoder.com/fullchain.pem"
-certKeyFile = "/opt/certs/letsencrypt/live/birdcoder.com/privkey.pem"
-chainFile = "/opt/certs/letsencrypt/live/birdcoder.com/chain.pem"
-ocspStapling = true
-
-[http.certificates."dtupay.com"]
-certFile = "/opt/certs/letsencrypt/live/dtupay.com/fullchain.pem"
-certKeyFile = "/opt/certs/letsencrypt/live/dtupay.com/privkey.pem"
-chainFile = "/opt/certs/letsencrypt/live/dtupay.com/chain.pem"
-ocspStapling = true
-
-[http.certificates."sdkwork.cn"]
-certFile = "/opt/certs/letsencrypt/live/sdkwork.cn/fullchain.pem"
-certKeyFile = "/opt/certs/letsencrypt/live/sdkwork.cn/privkey.pem"
-chainFile = "/opt/certs/letsencrypt/live/sdkwork.cn/chain.pem"
-ocspStapling = true
-
-[http.certificates."birdcoder.cn"]
-certFile = "/opt/certs/letsencrypt/live/birdcoder.cn/fullchain.pem"
-certKeyFile = "/opt/certs/letsencrypt/live/birdcoder.cn/privkey.pem"
-chainFile = "/opt/certs/letsencrypt/live/birdcoder.cn/chain.pem"
-ocspStapling = true
-
-[http.certificates."dtupay.cn"]
-certFile = "/opt/certs/letsencrypt/live/dtupay.cn/fullchain.pem"
-certKeyFile = "/opt/certs/letsencrypt/live/dtupay.cn/privkey.pem"
-chainFile = "/opt/certs/letsencrypt/live/dtupay.cn/chain.pem"
-ocspStapling = true
-
 [[http.server]]
 listen = ["80"]
-serverName = ["llm-dev.sdkwork.com", "llm-dev.birdcoder.com", "llm-dev.dtupay.com", "llm-dev.sdkwork.cn", "llm-dev.birdcoder.cn", "llm-dev.dtupay.cn", "memory-dev.sdkwork.com", "llm-app-dev.sdkwork.com", "llm-app-dev.birdcoder.com", "llm-app-dev.dtupay.com", "llm-app-dev.sdkwork.cn", "llm-app-dev.birdcoder.cn", "llm-app-dev.dtupay.cn", "memory-app-dev.sdkwork.com", "llm-admin-dev.sdkwork.com", "llm-admin-dev.birdcoder.com", "llm-admin-dev.dtupay.com", "llm-admin-dev.sdkwork.cn", "llm-admin-dev.birdcoder.cn", "llm-admin-dev.dtupay.cn", "memory-admin-dev.sdkwork.com", "llm-open-dev.sdkwork.com", "llm-open-dev.birdcoder.com", "llm-open-dev.dtupay.com", "llm-open-dev.sdkwork.cn", "llm-open-dev.birdcoder.cn", "llm-open-dev.dtupay.cn", "mem-dev.sdkwork.com"]
-
-[[http.server.location]]
-match = "/api/"
-proxyPass = "http://gateway"
-proxyHttpVersion = "1.1"
-proxySetHeader = ["Host $host", "X-Forwarded-For $proxy_add_x_forwarded_for", "X-Forwarded-Proto $scheme"]
-
-[[http.server.location]]
-match = "/"
-proxyPass = "http://gateway"
-proxyHttpVersion = "1.1"
-proxySetHeader = ["Host $host", "X-Forwarded-For $proxy_add_x_forwarded_for", "X-Forwarded-Proto $scheme"]
-proxyBuffering = false
-proxyReadTimeout = "300s"
+serverName = ["llm-dev.sdkwork.com", "llm-dev.birdcoder.com", "llm-dev.dtupay.com", "llm-dev.sdkwork.cn", "llm-dev.birdcoder.cn", "llm-dev.dtupay.cn", "llm-dev.skubc.com", "llm-dev.skubc.cn", "llm-dev.zowalk.com", "llm-dev.zowalk.cn", "llm-dev.offer86.com", "llm-dev.offer86.cn", "llm-dev.86offer.com", "llm-dev.86offer.cn", "memory-dev.sdkwork.com", "llm-app-dev.sdkwork.com", "llm-app-dev.birdcoder.com", "llm-app-dev.dtupay.com", "llm-app-dev.sdkwork.cn", "llm-app-dev.birdcoder.cn", "llm-app-dev.dtupay.cn", "llm-app-dev.skubc.com", "llm-app-dev.skubc.cn", "llm-app-dev.zowalk.com", "llm-app-dev.zowalk.cn", "llm-app-dev.offer86.com", "llm-app-dev.offer86.cn", "llm-app-dev.86offer.com", "llm-app-dev.86offer.cn", "memory-app-dev.sdkwork.com", "llm-admin-dev.sdkwork.com", "llm-admin-dev.birdcoder.com", "llm-admin-dev.dtupay.com", "llm-admin-dev.sdkwork.cn", "llm-admin-dev.birdcoder.cn", "llm-admin-dev.dtupay.cn", "llm-admin-dev.skubc.com", "llm-admin-dev.skubc.cn", "llm-admin-dev.zowalk.com", "llm-admin-dev.zowalk.cn", "llm-admin-dev.offer86.com", "llm-admin-dev.offer86.cn", "llm-admin-dev.86offer.com", "llm-admin-dev.86offer.cn", "memory-admin-dev.sdkwork.com", "llm-open-dev.sdkwork.com", "llm-open-dev.birdcoder.com", "llm-open-dev.dtupay.com", "llm-open-dev.sdkwork.cn", "llm-open-dev.birdcoder.cn", "llm-open-dev.dtupay.cn", "llm-open-dev.skubc.com", "llm-open-dev.skubc.cn", "llm-open-dev.zowalk.com", "llm-open-dev.zowalk.cn", "llm-open-dev.offer86.com", "llm-open-dev.offer86.cn", "llm-open-dev.86offer.com", "llm-open-dev.86offer.cn", "mem-dev.sdkwork.com"]
+include = ["snippets/gateway-locations.nonproduction.conf"]
 

@@ -105,6 +105,14 @@
             "llm-dev.sdkwork.cn",
             "llm-dev.birdcoder.cn",
             "llm-dev.dtupay.cn",
+            "llm-dev.skubc.com",
+            "llm-dev.skubc.cn",
+            "llm-dev.zowalk.com",
+            "llm-dev.zowalk.cn",
+            "llm-dev.offer86.com",
+            "llm-dev.offer86.cn",
+            "llm-dev.86offer.com",
+            "llm-dev.86offer.cn",
             "memory-dev.sdkwork.com"
           ]
         },
@@ -116,6 +124,14 @@
             "llm-test.sdkwork.cn",
             "llm-test.birdcoder.cn",
             "llm-test.dtupay.cn",
+            "llm-test.skubc.com",
+            "llm-test.skubc.cn",
+            "llm-test.zowalk.com",
+            "llm-test.zowalk.cn",
+            "llm-test.offer86.com",
+            "llm-test.offer86.cn",
+            "llm-test.86offer.com",
+            "llm-test.86offer.cn",
             "memory-test.sdkwork.com"
           ]
         },
@@ -127,6 +143,14 @@
             "llm-staging.sdkwork.cn",
             "llm-staging.birdcoder.cn",
             "llm-staging.dtupay.cn",
+            "llm-staging.skubc.com",
+            "llm-staging.skubc.cn",
+            "llm-staging.zowalk.com",
+            "llm-staging.zowalk.cn",
+            "llm-staging.offer86.com",
+            "llm-staging.offer86.cn",
+            "llm-staging.86offer.com",
+            "llm-staging.86offer.cn",
             "memory-staging.sdkwork.com"
           ]
         }
@@ -138,6 +162,14 @@
         "llm.sdkwork.cn",
         "llm.birdcoder.cn",
         "llm.dtupay.cn",
+        "llm.skubc.com",
+        "llm.skubc.cn",
+        "llm.zowalk.com",
+        "llm.zowalk.cn",
+        "llm.offer86.com",
+        "llm.offer86.cn",
+        "llm.86offer.com",
+        "llm.86offer.cn",
         "memory.sdkwork.com"
       ]
     },
@@ -152,6 +184,14 @@
             "llm-admin-dev.sdkwork.cn",
             "llm-admin-dev.birdcoder.cn",
             "llm-admin-dev.dtupay.cn",
+            "llm-admin-dev.skubc.com",
+            "llm-admin-dev.skubc.cn",
+            "llm-admin-dev.zowalk.com",
+            "llm-admin-dev.zowalk.cn",
+            "llm-admin-dev.offer86.com",
+            "llm-admin-dev.offer86.cn",
+            "llm-admin-dev.86offer.com",
+            "llm-admin-dev.86offer.cn",
             "memory-admin-dev.sdkwork.com"
           ]
         },
@@ -163,6 +203,14 @@
             "llm-admin-test.sdkwork.cn",
             "llm-admin-test.birdcoder.cn",
             "llm-admin-test.dtupay.cn",
+            "llm-admin-test.skubc.com",
+            "llm-admin-test.skubc.cn",
+            "llm-admin-test.zowalk.com",
+            "llm-admin-test.zowalk.cn",
+            "llm-admin-test.offer86.com",
+            "llm-admin-test.offer86.cn",
+            "llm-admin-test.86offer.com",
+            "llm-admin-test.86offer.cn",
             "memory-admin-test.sdkwork.com"
           ]
         },
@@ -174,6 +222,14 @@
             "llm-admin-staging.sdkwork.cn",
             "llm-admin-staging.birdcoder.cn",
             "llm-admin-staging.dtupay.cn",
+            "llm-admin-staging.skubc.com",
+            "llm-admin-staging.skubc.cn",
+            "llm-admin-staging.zowalk.com",
+            "llm-admin-staging.zowalk.cn",
+            "llm-admin-staging.offer86.com",
+            "llm-admin-staging.offer86.cn",
+            "llm-admin-staging.86offer.com",
+            "llm-admin-staging.86offer.cn",
             "memory-admin-staging.sdkwork.com"
           ]
         }
@@ -185,6 +241,14 @@
         "llm-admin.sdkwork.cn",
         "llm-admin.birdcoder.cn",
         "llm-admin.dtupay.cn",
+        "llm-admin.skubc.com",
+        "llm-admin.skubc.cn",
+        "llm-admin.zowalk.com",
+        "llm-admin.zowalk.cn",
+        "llm-admin.offer86.com",
+        "llm-admin.offer86.cn",
+        "llm-admin.86offer.com",
+        "llm-admin.86offer.cn",
         "memory-admin.sdkwork.com"
       ]
     },
@@ -199,6 +263,14 @@
             "llm-open-dev.sdkwork.cn",
             "llm-open-dev.birdcoder.cn",
             "llm-open-dev.dtupay.cn",
+            "llm-open-dev.skubc.com",
+            "llm-open-dev.skubc.cn",
+            "llm-open-dev.zowalk.com",
+            "llm-open-dev.zowalk.cn",
+            "llm-open-dev.offer86.com",
+            "llm-open-dev.offer86.cn",
+            "llm-open-dev.86offer.com",
+            "llm-open-dev.86offer.cn",
             "mem-dev.sdkwork.com"
           ]
         },
@@ -210,6 +282,14 @@
             "llm-open-test.sdkwork.cn",
             "llm-open-test.birdcoder.cn",
             "llm-open-test.dtupay.cn",
+            "llm-open-test.skubc.com",
+            "llm-open-test.skubc.cn",
+            "llm-open-test.zowalk.com",
+            "llm-open-test.zowalk.cn",
+            "llm-open-test.offer86.com",
+            "llm-open-test.offer86.cn",
+            "llm-open-test.86offer.com",
+            "llm-open-test.86offer.cn",
             "mem-test.sdkwork.com"
           ]
         },
@@ -221,6 +301,14 @@
             "llm-open-staging.sdkwork.cn",
             "llm-open-staging.birdcoder.cn",
             "llm-open-staging.dtupay.cn",
+            "llm-open-staging.skubc.com",
+            "llm-open-staging.skubc.cn",
+            "llm-open-staging.zowalk.com",
+            "llm-open-staging.zowalk.cn",
+            "llm-open-staging.offer86.com",
+            "llm-open-staging.offer86.cn",
+            "llm-open-staging.86offer.com",
+            "llm-open-staging.86offer.cn",
             "mem-staging.sdkwork.com"
           ]
         }
@@ -232,6 +320,14 @@
         "llm-open.sdkwork.cn",
         "llm-open.birdcoder.cn",
         "llm-open.dtupay.cn",
+        "llm-open.skubc.com",
+        "llm-open.skubc.cn",
+        "llm-open.zowalk.com",
+        "llm-open.zowalk.cn",
+        "llm-open.offer86.com",
+        "llm-open.offer86.cn",
+        "llm-open.86offer.com",
+        "llm-open.86offer.cn",
         "mem.sdkwork.com"
       ]
     },
@@ -246,6 +342,14 @@
             "llm-app-dev.sdkwork.cn",
             "llm-app-dev.birdcoder.cn",
             "llm-app-dev.dtupay.cn",
+            "llm-app-dev.skubc.com",
+            "llm-app-dev.skubc.cn",
+            "llm-app-dev.zowalk.com",
+            "llm-app-dev.zowalk.cn",
+            "llm-app-dev.offer86.com",
+            "llm-app-dev.offer86.cn",
+            "llm-app-dev.86offer.com",
+            "llm-app-dev.86offer.cn",
             "memory-app-dev.sdkwork.com"
           ]
         },
@@ -257,6 +361,14 @@
             "llm-app-test.sdkwork.cn",
             "llm-app-test.birdcoder.cn",
             "llm-app-test.dtupay.cn",
+            "llm-app-test.skubc.com",
+            "llm-app-test.skubc.cn",
+            "llm-app-test.zowalk.com",
+            "llm-app-test.zowalk.cn",
+            "llm-app-test.offer86.com",
+            "llm-app-test.offer86.cn",
+            "llm-app-test.86offer.com",
+            "llm-app-test.86offer.cn",
             "memory-app-test.sdkwork.com"
           ]
         },
@@ -268,6 +380,14 @@
             "llm-app-staging.sdkwork.cn",
             "llm-app-staging.birdcoder.cn",
             "llm-app-staging.dtupay.cn",
+            "llm-app-staging.skubc.com",
+            "llm-app-staging.skubc.cn",
+            "llm-app-staging.zowalk.com",
+            "llm-app-staging.zowalk.cn",
+            "llm-app-staging.offer86.com",
+            "llm-app-staging.offer86.cn",
+            "llm-app-staging.86offer.com",
+            "llm-app-staging.86offer.cn",
             "memory-app-staging.sdkwork.com"
           ]
         }
@@ -279,6 +399,14 @@
         "llm-app.sdkwork.cn",
         "llm-app.birdcoder.cn",
         "llm-app.dtupay.cn",
+        "llm-app.skubc.com",
+        "llm-app.skubc.cn",
+        "llm-app.zowalk.com",
+        "llm-app.zowalk.cn",
+        "llm-app.offer86.com",
+        "llm-app.offer86.cn",
+        "llm-app.86offer.com",
+        "llm-app.86offer.cn",
         "memory-app.sdkwork.com"
       ]
     },
@@ -292,7 +420,15 @@
             "api-dev.dtupay.com",
             "api-dev.sdkwork.cn",
             "api-dev.birdcoder.cn",
-            "api-dev.dtupay.cn"
+            "api-dev.dtupay.cn",
+            "api-dev.skubc.com",
+            "api-dev.skubc.cn",
+            "api-dev.zowalk.com",
+            "api-dev.zowalk.cn",
+            "api-dev.offer86.com",
+            "api-dev.offer86.cn",
+            "api-dev.86offer.com",
+            "api-dev.86offer.cn"
           ]
         },
         "test": {
@@ -302,7 +438,15 @@
             "api-test.dtupay.com",
             "api-test.sdkwork.cn",
             "api-test.birdcoder.cn",
-            "api-test.dtupay.cn"
+            "api-test.dtupay.cn",
+            "api-test.skubc.com",
+            "api-test.skubc.cn",
+            "api-test.zowalk.com",
+            "api-test.zowalk.cn",
+            "api-test.offer86.com",
+            "api-test.offer86.cn",
+            "api-test.86offer.com",
+            "api-test.86offer.cn"
           ]
         },
         "staging": {
@@ -312,7 +456,15 @@
             "api-staging.dtupay.com",
             "api-staging.sdkwork.cn",
             "api-staging.birdcoder.cn",
-            "api-staging.dtupay.cn"
+            "api-staging.dtupay.cn",
+            "api-staging.skubc.com",
+            "api-staging.skubc.cn",
+            "api-staging.zowalk.com",
+            "api-staging.zowalk.cn",
+            "api-staging.offer86.com",
+            "api-staging.offer86.cn",
+            "api-staging.86offer.com",
+            "api-staging.86offer.cn"
           ]
         }
       },
@@ -322,7 +474,15 @@
         "api.dtupay.com",
         "api.sdkwork.cn",
         "api.birdcoder.cn",
-        "api.dtupay.cn"
+        "api.dtupay.cn",
+        "api.skubc.com",
+        "api.skubc.cn",
+        "api.zowalk.com",
+        "api.zowalk.cn",
+        "api.offer86.com",
+        "api.offer86.cn",
+        "api.86offer.com",
+        "api.86offer.cn"
       ]
     }
   },
