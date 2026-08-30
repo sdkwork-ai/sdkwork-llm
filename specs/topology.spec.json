@@ -18,7 +18,8 @@
         "development",
         "test",
         "staging",
-        "production"
+        "production",
+        "demo"
       ]
     }
   },
@@ -36,7 +37,9 @@
     "standalone.test": "etc/topology/standalone.test.env",
     "standalone.staging": "etc/topology/standalone.staging.env",
     "cloud.test": "etc/topology/cloud.test.env",
-    "cloud.staging": "etc/topology/cloud.staging.env"
+    "cloud.staging": "etc/topology/cloud.staging.env",
+    "standalone.demo": "etc/topology/standalone.demo.env",
+    "cloud.demo": "etc/topology/cloud.demo.env"
   },
   "envKeys": {
     "deploymentProfile": "SDKWORK_LLM_DEPLOYMENT_PROFILE",
@@ -153,6 +156,25 @@
             "llm-staging.86offer.cn",
             "memory-staging.sdkwork.com"
           ]
+        },
+        "demo": {
+          "httpHosts": [
+            "llm-demo.sdkwork.com",
+            "llm-demo.birdcoder.com",
+            "llm-demo.dtupay.com",
+            "llm-demo.sdkwork.cn",
+            "llm-demo.birdcoder.cn",
+            "llm-demo.dtupay.cn",
+            "llm-demo.skubc.com",
+            "llm-demo.skubc.cn",
+            "llm-demo.zowalk.com",
+            "llm-demo.zowalk.cn",
+            "llm-demo.offer86.com",
+            "llm-demo.offer86.cn",
+            "llm-demo.86offer.com",
+            "llm-demo.86offer.cn",
+            "memory-demo.sdkwork.com"
+          ]
         }
       },
       "httpHosts": [
@@ -231,6 +253,25 @@
             "llm-admin-staging.86offer.com",
             "llm-admin-staging.86offer.cn",
             "memory-admin-staging.sdkwork.com"
+          ]
+        },
+        "demo": {
+          "httpHosts": [
+            "llm-admin-demo.sdkwork.com",
+            "llm-admin-demo.birdcoder.com",
+            "llm-admin-demo.dtupay.com",
+            "llm-admin-demo.sdkwork.cn",
+            "llm-admin-demo.birdcoder.cn",
+            "llm-admin-demo.dtupay.cn",
+            "llm-admin-demo.skubc.com",
+            "llm-admin-demo.skubc.cn",
+            "llm-admin-demo.zowalk.com",
+            "llm-admin-demo.zowalk.cn",
+            "llm-admin-demo.offer86.com",
+            "llm-admin-demo.offer86.cn",
+            "llm-admin-demo.86offer.com",
+            "llm-admin-demo.86offer.cn",
+            "memory-admin-demo.sdkwork.com"
           ]
         }
       },
@@ -311,6 +352,25 @@
             "llm-open-staging.86offer.cn",
             "mem-staging.sdkwork.com"
           ]
+        },
+        "demo": {
+          "httpHosts": [
+            "llm-open-demo.sdkwork.com",
+            "llm-open-demo.birdcoder.com",
+            "llm-open-demo.dtupay.com",
+            "llm-open-demo.sdkwork.cn",
+            "llm-open-demo.birdcoder.cn",
+            "llm-open-demo.dtupay.cn",
+            "llm-open-demo.skubc.com",
+            "llm-open-demo.skubc.cn",
+            "llm-open-demo.zowalk.com",
+            "llm-open-demo.zowalk.cn",
+            "llm-open-demo.offer86.com",
+            "llm-open-demo.offer86.cn",
+            "llm-open-demo.86offer.com",
+            "llm-open-demo.86offer.cn",
+            "mem-demo.sdkwork.com"
+          ]
         }
       },
       "httpHosts": [
@@ -390,6 +450,25 @@
             "llm-app-staging.86offer.cn",
             "memory-app-staging.sdkwork.com"
           ]
+        },
+        "demo": {
+          "httpHosts": [
+            "llm-app-demo.sdkwork.com",
+            "llm-app-demo.birdcoder.com",
+            "llm-app-demo.dtupay.com",
+            "llm-app-demo.sdkwork.cn",
+            "llm-app-demo.birdcoder.cn",
+            "llm-app-demo.dtupay.cn",
+            "llm-app-demo.skubc.com",
+            "llm-app-demo.skubc.cn",
+            "llm-app-demo.zowalk.com",
+            "llm-app-demo.zowalk.cn",
+            "llm-app-demo.offer86.com",
+            "llm-app-demo.offer86.cn",
+            "llm-app-demo.86offer.com",
+            "llm-app-demo.86offer.cn",
+            "memory-app-demo.sdkwork.com"
+          ]
         }
       },
       "httpHosts": [
@@ -465,6 +544,24 @@
             "api-staging.offer86.cn",
             "api-staging.86offer.com",
             "api-staging.86offer.cn"
+          ]
+        },
+        "demo": {
+          "httpHosts": [
+            "api-demo.sdkwork.com",
+            "api-demo.birdcoder.com",
+            "api-demo.dtupay.com",
+            "api-demo.sdkwork.cn",
+            "api-demo.birdcoder.cn",
+            "api-demo.dtupay.cn",
+            "api-demo.skubc.com",
+            "api-demo.skubc.cn",
+            "api-demo.zowalk.com",
+            "api-demo.zowalk.cn",
+            "api-demo.offer86.com",
+            "api-demo.offer86.cn",
+            "api-demo.86offer.com",
+            "api-demo.86offer.cn"
           ]
         }
       },
@@ -601,6 +698,14 @@
           "application.public-ingress",
           "platform.api-gateway"
         ]
+      },
+      "standalone.demo": {
+        "processes": [],
+        "healthSurfaces": []
+      },
+      "cloud.demo": {
+        "processes": [],
+        "healthSurfaces": []
       }
     }
   },
