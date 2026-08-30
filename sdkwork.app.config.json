@@ -44,7 +44,8 @@
     "supportedDeploymentProfiles": [
       "standalone",
       "cloud"
-    ]
+    ],
+    "defaultDeploymentProfile": "standalone"
   },
   "media": {
     "icons": {
@@ -53,7 +54,7 @@
         "type": "ICON",
         "purpose": "PRIMARY",
         "url": "https://cdn.sdkwork.com/apps/sdkwork-llm/assets/icon-1024.png",
-        "platform": "API",
+        "platform": "APP",
         "locale": "en-US",
         "width": 1024,
         "height": 1024,
@@ -68,29 +69,52 @@
       },
       "platform": [],
       "metadata": {
-        "generatedBy": "tools/materialize_phase1_contracts.mjs"
+        "generatedPlaceholder": true
       }
     },
-    "screenshots": [],
+    "screenshots": [
+      {
+        "id": "sdkwork-llm-web-screenshot",
+        "type": "SCREENSHOT",
+        "purpose": "CATALOG_SCREENSHOT",
+        "url": "https://cdn.sdkwork.com/apps/sdkwork-llm/media/web-screenshot.png",
+        "platform": "WEB",
+        "locale": "en-US",
+        "deviceClass": "BROWSER",
+        "displayType": "WEB_DESKTOP",
+        "width": 1920,
+        "height": 1080,
+        "format": "PNG",
+        "fileSizeBytes": 1048576,
+        "alphaChannel": false,
+        "caption": "SDKWork LLM product screenshot.",
+        "sortOrder": 0,
+        "enabled": true,
+        "metadata": {
+          "generatedPlaceholder": true,
+          "altText": "SDKWork LLM app screenshot."
+        }
+      }
+    ],
     "previews": [
       {
         "id": "sdkwork-llm-catalog-preview",
         "type": "PREVIEW_IMAGE",
         "purpose": "CATALOG_PREVIEW",
         "url": "https://cdn.sdkwork.com/apps/sdkwork-llm/media/preview-cover.png",
-        "platform": "API",
+        "platform": "WEB",
         "locale": "en-US",
         "width": 1600,
         "height": 900,
         "format": "PNG",
         "fileSizeBytes": 786432,
         "alphaChannel": false,
-        "caption": "SDKWork LLM service preview.",
+        "caption": "SDKWork LLM preview.",
         "sortOrder": 0,
         "enabled": true,
         "metadata": {
           "generatedPlaceholder": true,
-          "altText": "SDKWork LLM service preview cover."
+          "altText": "SDKWork LLM preview cover."
         }
       }
     ],
@@ -110,7 +134,7 @@
     "installPlatforms": [
       "API"
     ],
-    "defaultPackageId": "container-x64-server-docker-image",
+    "defaultPackageId": "container-x64-cloud-server-docker-image",
     "storeUrl": "https://sdkwork.com/apps/sdkwork-llm",
     "stores": [],
     "config": {
@@ -121,18 +145,18 @@
   },
   "artifacts": {
     "installConfig": {
-      "defaultPackageId": "container-x64-server-docker-image",
+      "defaultPackageId": "container-x64-cloud-server-docker-image",
       "installCommand": "sdkwork install sdkwork-llm",
       "launchCommand": "sdkwork open sdkwork-llm",
       "uninstallCommand": "sdkwork uninstall sdkwork-llm",
       "packages": [
         {
-          "id": "container-x64-server-docker-image",
+          "id": "container-x64-cloud-server-docker-image",
           "name": "SDKWork LLM Server Container",
           "sourceType": "CONTAINER_IMAGE",
           "packageFormat": "DOCKER_IMAGE",
           "platform": "API",
-          "url": "https://registry.sdkwork.com/v2/apps/sdkwork-llm/manifests/0.1.0",
+          "url": "https://registry.sdkwork.com/v2/apps/sdkwork-llm/manifests/0.1.0@sha256:aabbccddeeff00112233445566778899aabbccddeeff00112233445566778899",
           "enabled": false,
           "metadata": {
             "image": "registry.sdkwork.com/apps/sdkwork-llm:0.1.0",
@@ -140,7 +164,42 @@
           },
           "architecture": "x64",
           "checksumAlgorithm": "SHA-256",
-          "checksum": "4d656d6f72794472616674436f6e74726163744f6e6c794e6f7452656c65617365"
+          "checksum": "4d656d6f72794472616674436f6e74726163744f6e6c794e6f7452656c65617365",
+          "runtimeTarget": "server",
+          "profileBinding": "fixed",
+          "deploymentProfile": "cloud"
+        },
+        {
+          "id": "linux-x64-standalone-server-tar-gz",
+          "name": "Sdkwork Llm standalone server archive",
+          "sourceType": "BINARY_URL",
+          "packageFormat": "TAR_GZ",
+          "platform": "API",
+          "url": "https://cdn.sdkwork.com/apps/sdkwork-llm/STABLE/0.1.0/linux-x64-standalone-server-tar-gz-0.1.0.tar.gz",
+          "architecture": "x64",
+          "checksumAlgorithm": "SHA-256",
+          "checksum": "7d07359afcf3fef9aca60d917e1cc44aa59ab244427ebe77333740cdcaea429f",
+          "deploymentProfile": "standalone",
+          "runtimeTarget": "server",
+          "profileBinding": "fixed",
+          "enabled": true,
+          "metadata": {}
+        },
+        {
+          "id": "linux-x64-cloud-server-tar-gz",
+          "name": "Sdkwork Llm cloud server archive",
+          "sourceType": "BINARY_URL",
+          "packageFormat": "TAR_GZ",
+          "platform": "API",
+          "url": "https://cdn.sdkwork.com/apps/sdkwork-llm/STABLE/0.1.0/linux-x64-cloud-server-tar-gz-0.1.0.tar.gz",
+          "architecture": "x64",
+          "checksumAlgorithm": "SHA-256",
+          "checksum": "15c0dbbc648d4003a16e3987ab0ff9ed18febc5d8b7949e4b1e1ef94e0f574ea",
+          "deploymentProfile": "cloud",
+          "runtimeTarget": "server",
+          "profileBinding": "fixed",
+          "enabled": true,
+          "metadata": {}
         }
       ],
       "metadata": {
@@ -155,30 +214,31 @@
     "currentVersion": "0.1.0",
     "defaultChannel": "DEV",
     "latest": {
+      "STABLE": "0.1.0",
       "DEV": "0.1.0"
     },
     "notes": [
       {
         "version": "0.1.0",
         "releaseChannel": "DEV",
-        "title": "SDKWork LLM 0.1.0 Draft",
-        "summary": "Initial SDKWork LLM contract skeleton.",
-        "content": "Initial SDKWork LLM standard contracts for schema registry, app-api, backend-api, and SDK family metadata.",
+        "title": "SDKWork LLM 0.1.0",
+        "summary": "SDKWork LLM initialized standard release.",
+        "content": "Initial SDKWork App Standard v3 manifest for SDKWork LLM.",
         "highlights": [
-          "Provider-routable LLM execution architecture",
-          "Multi-protocol LLM provider routing",
-          "SDKWork app-api and backend-api authority drafts"
+          "SDKWork App Standard v3 configuration initialized",
+          "platform_app projection metadata standardized",
+          "Download package matrix normalized"
         ],
         "packageIds": [
-          "container-x64-server-docker-image"
+          "container-x64-cloud-server-docker-image",
+          "linux-x64-standalone-server-tar-gz",
+          "linux-x64-cloud-server-tar-gz"
         ],
         "publishedAt": "2026-06-10T00:00:00Z",
         "current": true,
         "forceUpdate": false,
         "minSupportedVersion": "0.1.0",
-        "metadata": {
-          "draft": true
-        }
+        "metadata": {}
       }
     ]
   },
@@ -196,7 +256,7 @@
   "metadata": {
     "standardOwner": "sdkwork-platform",
     "initializedAt": "2026-06-10T00:00:00Z",
-    "managedBy": "tools/materialize_phase1_contracts.mjs"
-  },
-  "sdkDependencies": []
+    "managedBy": "tools/materialize_phase1_contracts.mjs",
+    "deploymentConfig": "etc/sdkwork.deployment.config.json"
+  }
 }
