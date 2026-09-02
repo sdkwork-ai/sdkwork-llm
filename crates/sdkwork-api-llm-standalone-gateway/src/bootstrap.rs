@@ -1,10 +1,11 @@
 use axum::Router;
+use sdkwork_web_bootstrap::{ApiModuleRegistry, infra_public_path_prefixes};
 use sdkwork_api_llm_assembly::assemble_api_router_runtime;
 use sdkwork_iam_web_adapter::{
     build_web_framework_builder, iam_web_request_context_resolver_from_database_pool_for_audiences,
     iam_web_request_context_resolver_from_env, IamAuditEmitter, IamSecurityEventEmitter,
 };
-use sdkwork_web_bootstrap::{infra_public_path_prefixes, ComposedApiAssembly};
+
 use std::sync::Arc;
 
 const APPLICATION_ID: &str = "sdkwork-llm";
@@ -33,7 +34,9 @@ pub async fn build_router() -> Result<Router, String> {
         assembly.route_manifest.clone(),
         infra_public_path_prefixes(),
     );
-    if production {
+    let mut module_registry = ApiModuleRegistry::new();
+    module_registry.add_modules(vec![assembly]);
+if production {
         let postgres_pool = runtime
             .database_pool
             .as_postgres()
@@ -51,7 +54,8 @@ pub async fn build_router() -> Result<Router, String> {
             )));
     }
     Ok(
-        ComposedApiAssembly::try_compose("SDKWork LLM API", vec![assembly])?
+        module_registry
+    .try_compose("SDKWork LLM API")?
             .into_hosted(framework)
             .router,
     )

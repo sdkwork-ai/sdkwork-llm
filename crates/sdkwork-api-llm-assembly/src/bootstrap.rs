@@ -14,7 +14,7 @@ use sdkwork_intelligence_llm_service::OpenLlmService;
 use sdkwork_routes_llm_app_api::build_router_with_shared_app_api;
 use sdkwork_routes_llm_backend_api::build_router_with_shared_backend_api;
 use sdkwork_routes_llm_open_api::build_router_with_shared_open_api;
-use sdkwork_web_bootstrap::{ApiAssemblyContribution, DatabasePoolReadinessCheck, ReadinessCheck};
+use sdkwork_web_bootstrap::{ApiAssemblyContribution, DatabasePoolReadinessCheck, ReadinessCheck, WebModule};
 use sdkwork_web_core::HttpRouteManifest;
 use std::sync::Arc;
 
@@ -120,4 +120,17 @@ pub async fn assemble_api_router_with_pool(pool: DatabasePool) -> Result<ApiAsse
         .merge(build_router_with_shared_backend_api(product));
 
     contribution_from(router, Arc::new(DatabasePoolReadinessCheck::new(pool)))
+}
+
+/// Canonical Web Module definition for this application
+/// (API_ASSEMBLY_SPEC §4.1.1): the complete HTTP surface — every route,
+/// manifest, and OpenAPI document of this owner — as one installable module.
+pub async fn web_module() -> Result<WebModule, String> {
+    Ok(WebModule::from_contribution(assemble_api_router().await?))
+}
+
+/// Same as [`web_module`] but composed on a process-shared database pool
+/// (platform gateways, API_ASSEMBLY_SPEC §4.1.1).
+pub async fn web_module_with_pool(pool: DatabasePool) -> Result<WebModule, String> {
+    Ok(WebModule::from_contribution(assemble_api_router_with_pool(pool).await?))
 }
