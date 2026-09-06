@@ -40,6 +40,18 @@ include = ["snippets/adaptive-web.dispatch.conf"]
 
 [[http.server]]
 listen = ["443 ssl", "80"]
+serverName = ["llm.noaper.com", "llm-app.noaper.com", "llm-admin.noaper.com", "llm-open.noaper.com"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "noaper.com"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
 serverName = ["llm.sdkwork.cn", "llm-app.sdkwork.cn", "llm-admin.sdkwork.cn", "llm-open.sdkwork.cn"]
 include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
 
@@ -69,6 +81,18 @@ include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-l
 
 [http.server.tls]
 cert = "dtupay.cn"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["llm.noaper.cn", "llm-app.noaper.cn", "llm-admin.noaper.cn", "llm-open.noaper.cn"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "noaper.cn"
 
 [[http.server.location]]
 match = "/"
