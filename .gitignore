@@ -65,3 +65,6 @@ sdks/**/generated/server-openapi/package-lock.json
 Thumbs.db
 # Runtime-generated environment configuration
 **/public/runtime-env.json
+
+# Build artifacts
+/bin/
