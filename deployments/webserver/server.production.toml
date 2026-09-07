@@ -4,7 +4,7 @@ environment = "production"
 
 [[http.server]]
 listen = ["443 ssl", "80"]
-serverName = ["llm.sdkwork.com", "memory.sdkwork.com", "llm-app.sdkwork.com", "memory-app.sdkwork.com", "llm-admin.sdkwork.com", "memory-admin.sdkwork.com", "llm-open.sdkwork.com", "mem.sdkwork.com"]
+serverName = ["llm.sdkwork.com", "llm-app.sdkwork.com", "llm-admin.sdkwork.com", "llm-open.sdkwork.com"]
 include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
 
 [http.server.tls]

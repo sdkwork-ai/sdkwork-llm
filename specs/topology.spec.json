@@ -117,8 +117,7 @@
             "llm-dev.offer86.com",
             "llm-dev.offer86.cn",
             "llm-dev.86offer.com",
-            "llm-dev.86offer.cn",
-            "memory-dev.sdkwork.com"
+            "llm-dev.86offer.cn"
           ]
         },
         "test": {
@@ -138,8 +137,7 @@
             "llm-test.offer86.com",
             "llm-test.offer86.cn",
             "llm-test.86offer.com",
-            "llm-test.86offer.cn",
-            "memory-test.sdkwork.com"
+            "llm-test.86offer.cn"
           ]
         },
         "staging": {
@@ -159,8 +157,7 @@
             "llm-staging.offer86.com",
             "llm-staging.offer86.cn",
             "llm-staging.86offer.com",
-            "llm-staging.86offer.cn",
-            "memory-staging.sdkwork.com"
+            "llm-staging.86offer.cn"
           ]
         },
         "demo": {
@@ -180,8 +177,7 @@
             "llm-demo.offer86.com",
             "llm-demo.offer86.cn",
             "llm-demo.86offer.com",
-            "llm-demo.86offer.cn",
-            "memory-demo.sdkwork.com"
+            "llm-demo.86offer.cn"
           ]
         }
       },
@@ -201,8 +197,7 @@
         "llm.offer86.com",
         "llm.offer86.cn",
         "llm.86offer.com",
-        "llm.86offer.cn",
-        "memory.sdkwork.com"
+        "llm.86offer.cn"
       ]
     },
     "application.backend-http": {
@@ -225,8 +220,7 @@
             "llm-admin-dev.offer86.com",
             "llm-admin-dev.offer86.cn",
             "llm-admin-dev.86offer.com",
-            "llm-admin-dev.86offer.cn",
-            "memory-admin-dev.sdkwork.com"
+            "llm-admin-dev.86offer.cn"
           ]
         },
         "test": {
@@ -246,8 +240,7 @@
             "llm-admin-test.offer86.com",
             "llm-admin-test.offer86.cn",
             "llm-admin-test.86offer.com",
-            "llm-admin-test.86offer.cn",
-            "memory-admin-test.sdkwork.com"
+            "llm-admin-test.86offer.cn"
           ]
         },
         "staging": {
@@ -267,8 +260,7 @@
             "llm-admin-staging.offer86.com",
             "llm-admin-staging.offer86.cn",
             "llm-admin-staging.86offer.com",
-            "llm-admin-staging.86offer.cn",
-            "memory-admin-staging.sdkwork.com"
+            "llm-admin-staging.86offer.cn"
           ]
         },
         "demo": {
@@ -288,8 +280,7 @@
             "llm-admin-demo.offer86.com",
             "llm-admin-demo.offer86.cn",
             "llm-admin-demo.86offer.com",
-            "llm-admin-demo.86offer.cn",
-            "memory-admin-demo.sdkwork.com"
+            "llm-admin-demo.86offer.cn"
           ]
         }
       },
@@ -309,8 +300,7 @@
         "llm-admin.offer86.com",
         "llm-admin.offer86.cn",
         "llm-admin.86offer.com",
-        "llm-admin.86offer.cn",
-        "memory-admin.sdkwork.com"
+        "llm-admin.86offer.cn"
       ]
     },
     "application.open-http": {
@@ -333,8 +323,7 @@
             "llm-open-dev.offer86.com",
             "llm-open-dev.offer86.cn",
             "llm-open-dev.86offer.com",
-            "llm-open-dev.86offer.cn",
-            "mem-dev.sdkwork.com"
+            "llm-open-dev.86offer.cn"
           ]
         },
         "test": {
@@ -354,8 +343,7 @@
             "llm-open-test.offer86.com",
             "llm-open-test.offer86.cn",
             "llm-open-test.86offer.com",
-            "llm-open-test.86offer.cn",
-            "mem-test.sdkwork.com"
+            "llm-open-test.86offer.cn"
           ]
         },
         "staging": {
@@ -375,8 +363,7 @@
             "llm-open-staging.offer86.com",
             "llm-open-staging.offer86.cn",
             "llm-open-staging.86offer.com",
-            "llm-open-staging.86offer.cn",
-            "mem-staging.sdkwork.com"
+            "llm-open-staging.86offer.cn"
           ]
         },
         "demo": {
@@ -396,8 +383,7 @@
             "llm-open-demo.offer86.com",
             "llm-open-demo.offer86.cn",
             "llm-open-demo.86offer.com",
-            "llm-open-demo.86offer.cn",
-            "mem-demo.sdkwork.com"
+            "llm-open-demo.86offer.cn"
           ]
         }
       },
@@ -417,8 +403,7 @@
         "llm-open.offer86.com",
         "llm-open.offer86.cn",
         "llm-open.86offer.com",
-        "llm-open.86offer.cn",
-        "mem.sdkwork.com"
+        "llm-open.86offer.cn"
       ]
     },
     "application.app-http": {
@@ -441,8 +426,7 @@
             "llm-app-dev.offer86.com",
             "llm-app-dev.offer86.cn",
             "llm-app-dev.86offer.com",
-            "llm-app-dev.86offer.cn",
-            "memory-app-dev.sdkwork.com"
+            "llm-app-dev.86offer.cn"
           ]
         },
         "test": {
@@ -462,8 +446,7 @@
             "llm-app-test.offer86.com",
             "llm-app-test.offer86.cn",
             "llm-app-test.86offer.com",
-            "llm-app-test.86offer.cn",
-            "memory-app-test.sdkwork.com"
+            "llm-app-test.86offer.cn"
           ]
         },
         "staging": {
@@ -483,8 +466,7 @@
             "llm-app-staging.offer86.com",
             "llm-app-staging.offer86.cn",
             "llm-app-staging.86offer.com",
-            "llm-app-staging.86offer.cn",
-            "memory-app-staging.sdkwork.com"
+            "llm-app-staging.86offer.cn"
           ]
         },
         "demo": {
@@ -504,8 +486,7 @@
             "llm-app-demo.offer86.com",
             "llm-app-demo.offer86.cn",
             "llm-app-demo.86offer.com",
-            "llm-app-demo.86offer.cn",
-            "memory-app-demo.sdkwork.com"
+            "llm-app-demo.86offer.cn"
           ]
         }
       },
@@ -525,8 +506,7 @@
         "llm-app.offer86.com",
         "llm-app.offer86.cn",
         "llm-app.86offer.com",
-        "llm-app.86offer.cn",
-        "memory-app.sdkwork.com"
+        "llm-app.86offer.cn"
       ]
     },
     "platform.api-gateway": {

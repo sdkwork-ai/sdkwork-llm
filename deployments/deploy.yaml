@@ -24,10 +24,6 @@ profiles:
           - llm-app-dev.sdkwork.com
           - llm-dev.sdkwork.com
           - llm-open-dev.sdkwork.com
-          - mem-dev.sdkwork.com
-          - memory-admin-dev.sdkwork.com
-          - memory-app-dev.sdkwork.com
-          - memory-dev.sdkwork.com
       - domain: llm-admin-dev.birdcoder.com
         tls: birdcoder.com
         mode: web+api
@@ -177,10 +173,6 @@ profiles:
           - llm-app.sdkwork.com
           - llm-open.sdkwork.com
           - llm.sdkwork.com
-          - mem.sdkwork.com
-          - memory-admin.sdkwork.com
-          - memory-app.sdkwork.com
-          - memory.sdkwork.com
       - domain: llm-admin.birdcoder.com
         tls: birdcoder.com
         mode: web+api
@@ -330,10 +322,6 @@ profiles:
           - llm-app-dev.sdkwork.com
           - llm-dev.sdkwork.com
           - llm-open-dev.sdkwork.com
-          - mem-dev.sdkwork.com
-          - memory-admin-dev.sdkwork.com
-          - memory-app-dev.sdkwork.com
-          - memory-dev.sdkwork.com
       - domain: llm-admin-dev.birdcoder.com
         tls: birdcoder.com
         mode: web+api
@@ -483,10 +471,6 @@ profiles:
           - llm-app.sdkwork.com
           - llm-open.sdkwork.com
           - llm.sdkwork.com
-          - mem.sdkwork.com
-          - memory-admin.sdkwork.com
-          - memory-app.sdkwork.com
-          - memory.sdkwork.com
       - domain: llm-admin.birdcoder.com
         tls: birdcoder.com
         mode: web+api
