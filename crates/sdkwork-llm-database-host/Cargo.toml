@@ -1,10 +1,14 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-llm-database-host"
 edition.workspace = true
 version.workspace = true
 license.workspace = true
 description = "SDKWork LLM database lifecycle bootstrap."
 
+
+[lints]
+workspace = true
 [lib]
 name = "sdkwork_llm_database_host"
 path = "src/lib.rs"

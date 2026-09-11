@@ -1,8 +1,12 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-llm-test-support"
 edition.workspace = true
 version.workspace = true
 license.workspace = true
 
+
+[lints]
+workspace = true
 [dependencies]
 sdkwork-llm-spi = { workspace = true }
