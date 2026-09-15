@@ -1,3 +1,4 @@
+// WORKSPACE-PATH:allow-fixture: fixtures name a foreign checkout root, drive, or home directory to exercise path handling, so the literal is the value under assertion rather than a binding this build resolves
 use sdkwork_llm_plugin_native_sql::{
     build_native_sql_candidate_store, build_native_sql_habit_store,
     build_native_sql_retrieval_trace_store, NativeSqlAppendOutboxEventCommand, NativeSqlLlmStore,
