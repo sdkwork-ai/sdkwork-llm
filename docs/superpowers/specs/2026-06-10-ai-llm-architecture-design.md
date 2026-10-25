@@ -1776,7 +1776,7 @@ sdkwork-llm/
   AGENTS.md
   CODEX.md
   GEMINI.md
-  sdkwork.app.config.json
+  agent.app.config.json
   specs/
     README.md
     component.spec.json
@@ -3289,7 +3289,7 @@ Deliver:
 
 ```text
 AGENTS.md and shims
-sdkwork.app.config.json
+agent.app.config.json
 specs/component.spec.json
 docs/schema-registry/tables/*.yaml
 sdks/sdkwork-llm-sdk skeleton

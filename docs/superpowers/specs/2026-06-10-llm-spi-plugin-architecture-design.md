@@ -12,7 +12,7 @@ The goal is a memory system that supports a practical no-embedding native SQL ba
 
 The current repository is a contract and standards skeleton. It has no runtime `src/`, Rust workspace, service crates, route crates, or generated language SDK output. The authoritative artifacts are:
 
-- `sdkwork.app.config.json`
+- `agent.app.config.json`
 - `specs/component.spec.json`
 - `docs/superpowers/specs/2026-06-10-ai-memory-architecture-design.md`
 - `docs/schema-registry/tables/*.yaml`

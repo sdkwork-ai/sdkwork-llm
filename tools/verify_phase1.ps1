@@ -27,7 +27,7 @@ $requiredFiles = @(
     ".sdkwork/README.md",
     ".sdkwork/skills/README.md",
     ".sdkwork/plugins/README.md",
-    "sdkwork.app.config.json",
+    "agent.app.config.json",
     "specs/README.md",
     "specs/component.spec.json",
     "docs/superpowers/specs/2026-06-10-ai-llm-architecture-design.md",
@@ -78,12 +78,12 @@ foreach ($forbidden in @("sdks/sdkwork-llm-open-api", "sdks/sdkwork-llm-app-api"
     }
 }
 
-$appConfig = Read-JsonFile "sdkwork.app.config.json"
-if ($appConfig.schemaVersion -ne 3 -or $appConfig.kind -ne "sdkwork.app") {
-    throw "sdkwork.app.config.json must use SDKWork app manifest v3"
+$appConfig = Read-JsonFile "agent.app.config.json"
+if ($appConfig.schemaVersion -ne 3 -or $appConfig.kind -ne "agent.app") {
+    throw "agent.app.config.json must use SDKWork app manifest v3"
 }
 if ($appConfig.app.key -ne "sdkwork-llm") {
-    throw "sdkwork.app.config.json app.key must be sdkwork-llm"
+    throw "agent.app.config.json app.key must be sdkwork-llm"
 }
 
 $rootSpec = Read-JsonFile "specs/component.spec.json"

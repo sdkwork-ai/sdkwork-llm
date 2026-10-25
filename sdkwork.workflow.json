@@ -6,7 +6,7 @@
     "name": "SDKWork LLM",
     "repository": "sdkwork-ai/sdkwork-llm",
     "sourcePath": ".",
-    "configPath": "sdkwork.app.config.json"
+    "configPath": "agent.app.config.json"
   },
   "release": {
     "artifactPrefix": "sdkwork-llm",
