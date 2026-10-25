@@ -60,7 +60,7 @@ for (const directory of requiredDirectories) {
 }
 
 assert(fs.existsSync(path.join(repoRoot, 'agent.app.config.json')), 'agent.app.config.json must exist');
-assert(fs.existsSync(path.join(repoRoot, 'sdkwork.workflow.json')), 'sdkwork.workflow.json must exist');
+assert(fs.existsSync(path.join(repoRoot, 'agent.workflow.json')), 'agent.workflow.json must exist');
 assert(fs.existsSync(path.join(repoRoot, 'package.json')), 'package.json must exist per PNPM_SCRIPT_SPEC.md');
 assert(
   fs.existsSync(path.join(repoRoot, '.github/workflows/package.yml')),
@@ -143,7 +143,7 @@ assert(dockerfile.includes('SDKWORK_LLM_APP_ROOT=/app'), 'docker image must set 
 const databaseManifest = readJson('database/database.manifest.json');
 assert(databaseManifest.tablePrefix === 'llm_', 'database manifest tablePrefix must be llm_');
 
-const workflow = readJson('sdkwork.workflow.json');
+const workflow = readJson('agent.workflow.json');
 const dependencyIds = new Set((workflow.dependencies || []).map((dependency) => dependency.id));
 for (const dependencyId of [
   'sdkwork-appbase',
@@ -154,9 +154,9 @@ for (const dependencyId of [
   'sdkwork-sdk-generator',
   'sdkwork-app-topology',
 ]) {
-  assert(dependencyIds.has(dependencyId), `sdkwork.workflow.json must declare ${dependencyId}`);
+  assert(dependencyIds.has(dependencyId), `agent.workflow.json must declare ${dependencyId}`);
 }
-assert(!dependencyIds.has('sdkwork-discovery'), 'sdkwork.workflow.json must not declare sdkwork-discovery until RPC exists');
+assert(!dependencyIds.has('sdkwork-discovery'), 'agent.workflow.json must not declare sdkwork-discovery until RPC exists');
 
 const routerCrates = [
   'crates/sdkwork-routes-llm-open-api/Cargo.toml',
